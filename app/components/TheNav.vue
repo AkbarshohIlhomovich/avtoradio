@@ -11,10 +11,10 @@ interface MenuItem { label: string; to?: string; href?: string }
 const menu: MenuItem[] = [
   { label: 'Bosh sahifa',   to:   '/' },
   { label: 'Boshlovchilar', to:   '/boshlovchilar' },
-  { label: 'Loyihalar',     href: '#projects' },
-  { label: 'Mukofotlar',    href: '#awards' },
-  { label: 'Dekabr',        href: '#strategy' },
-  { label: 'Aloqa',         href: '#contact' },
+  { label: 'Loyihalar',     to:   '/loyihalar' },
+  { label: 'Mukofotlar',    to:   '/mukofotlar' },
+  { label: 'Dekabr',        to:   '/dekabr' },
+  { label: 'Aloqa',         to:   '/aloqa' },
 ]
 
 const menuOpen = ref(false)
