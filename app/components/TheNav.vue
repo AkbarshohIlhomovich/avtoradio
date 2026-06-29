@@ -18,14 +18,57 @@ const menu: MenuItem[] = [
 ]
 
 const menuOpen = ref(false)
-const playing = ref(false)
-const audio = ref<HTMLAudioElement | null>(null)
+const playing  = ref(false)
+const loading  = ref(false)
+const audio    = ref<HTMLAudioElement | null>(null)
 
-function toggleLive() {
-  if (!audio.value) audio.value = new Audio('https://avtoradio.uz/stream')
-  if (playing.value) { audio.value.pause(); playing.value = false }
-  else { audio.value.play().catch(() => {}); playing.value = true }
+// Avtoradio 102 FM — Icecast live stream (HTTPS cert expired, fallback to HTTP on :8000)
+const STREAM_URLS = [
+  'http://fm102.uz:8000/autoradio',
+  'https://fm102.uz:8443/autoradio',
+]
+
+function buildAudio(): HTMLAudioElement {
+  const el = new Audio()
+  el.preload = 'none'
+  el.crossOrigin = 'anonymous'
+  el.volume = 0.9
+  el.addEventListener('playing', () => { loading.value = false; playing.value = true })
+  el.addEventListener('pause',   () => { playing.value = false })
+  el.addEventListener('waiting', () => { loading.value = true })
+  el.addEventListener('error',   () => { loading.value = false; playing.value = false; tryNextStream() })
+  return el
 }
+
+let streamIndex = 0
+function tryNextStream() {
+  if (!audio.value) return
+  streamIndex = (streamIndex + 1) % STREAM_URLS.length
+  audio.value.src = `${STREAM_URLS[streamIndex]}?t=${Date.now()}`
+  audio.value.play().catch(() => { loading.value = false; playing.value = false })
+}
+
+async function toggleLive() {
+  if (!audio.value) audio.value = buildAudio()
+
+  if (playing.value) {
+    audio.value.pause()
+    audio.value.src = ''
+    playing.value = false
+    loading.value = false
+    return
+  }
+
+  loading.value = true
+  streamIndex = 0
+  audio.value.src = `${STREAM_URLS[streamIndex]}?t=${Date.now()}`
+  try {
+    await audio.value.play()
+  } catch {
+    loading.value = false
+  }
+}
+
 function openMenu()  { menuOpen.value = true;  document.body.style.overflow = 'hidden' }
 function closeMenu() { menuOpen.value = false; document.body.style.overflow = '' }
 function onKey(e: KeyboardEvent) { if (e.key === 'Escape') closeMenu() }
@@ -33,6 +76,7 @@ function onKey(e: KeyboardEvent) { if (e.key === 'Escape') closeMenu() }
 onMounted(() => window.addEventListener('keydown', onKey))
 onBeforeUnmount(() => {
   audio.value?.pause()
+  audio.value = null
   window.removeEventListener('keydown', onKey)
   document.body.style.overflow = ''
 })
@@ -65,7 +109,11 @@ onBeforeUnmount(() => {
         aria-label="ON AIR"
       >
         <span class="w-[40px] h-[40px] flex items-center justify-center fill-black">
-          <svg viewBox="0 0 43 47" class="w-[40px] h-[40px] fill-current">
+          <svg v-if="loading" viewBox="0 0 40 40" class="w-[34px] h-[34px] animate-spin">
+            <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="3" fill="none" opacity="0.2"/>
+            <path d="M20 4 a16 16 0 0 1 16 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+          </svg>
+          <svg v-else viewBox="0 0 43 47" class="w-[40px] h-[40px] fill-current">
             <path v-if="!playing" d="M5.907 47a6 6 0 0 1-3.043-.829C1.022 45.086 0 43.032 0 40.921V6.019c0-1.68.635-3.34 1.894-4.475A5.99 5.99 0 0 1 8.86.777l31.187 17.695A5.79 5.79 0 0 1 43 23.5c0 2.073-1.127 3.989-2.953 5.027L8.86 46.223A6 6 0 0 1 5.907 47z"/>
             <g v-else>
               <rect x="6" y="6" width="11" height="35" rx="2"/>
@@ -73,7 +121,9 @@ onBeforeUnmount(() => {
             </g>
           </svg>
         </span>
-        <span class="text-[25px] leading-[35px] font-normal whitespace-nowrap">{{ playing ? 'ЭФИРДА' : 'ON AIR' }}</span>
+        <span class="text-[25px] leading-[35px] font-normal whitespace-nowrap">
+          {{ loading ? 'YUKLANMOQDA' : playing ? 'ЭФИРДА' : 'ON AIR' }}
+        </span>
       </button>
 
       <!-- Right cluster: burger image on top, 2×2 socials below (all PNGs from original) -->
