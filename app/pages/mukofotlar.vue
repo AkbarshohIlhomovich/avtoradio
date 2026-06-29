@@ -12,7 +12,7 @@ useHead({
         MUKOFOTLAR
       </h1>
       <p class="mt-6 max-w-[640px] text-[16px] md:text-[18px] leading-relaxed text-black/80">
-        Yubilei yili — 102 FM tinglovchilarini kutayotgan asosiy sovg‘alar va o‘yinlar tizimi. Naqd pul, oltin, avtomobil va xorijiy sayohatlar.
+        Yubiley yili — 102 FM tinglovchilarini kutayotgan asosiy sovg‘alar va o‘yinlar tizimi. Naqd pul, oltin, avtomobil va xorijiy sayohatlar.
       </p>
     </section>
 
