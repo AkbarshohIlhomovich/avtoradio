@@ -19,7 +19,7 @@ const stores = [
   <section class="bg-black text-white">
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
 
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
+      <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
         <header class="max-w-[520px]">
           <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-y/70 mb-3">Mobil ilova</span>
           <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-white tracking-tight">

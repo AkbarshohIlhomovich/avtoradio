@@ -13,7 +13,7 @@ const side = [
   <section class="bg-black text-white">
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
 
-      <header class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <header v-motion-slide-visible-once-bottom class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-y/70 mb-3">Mukofotlar</span>
           <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-white tracking-tight">
@@ -30,7 +30,7 @@ const side = [
       </header>
 
       <!-- 2-column mosaic: big featured + 3 stacked -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 md:h-[520px]">
+      <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 md:h-[520px]">
 
         <!-- Featured card -->
         <NuxtLink

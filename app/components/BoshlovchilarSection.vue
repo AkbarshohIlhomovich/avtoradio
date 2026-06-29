@@ -106,7 +106,14 @@ onBeforeUnmount(() => {
   <section id="efir" class="bg-white py-16 md:py-24">
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0">
       <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-12">
-        <li v-for="h in hosts" :key="h.name">
+        <li
+          v-for="(h, i) in hosts"
+          :key="h.name"
+          v-motion="{
+            initial: { opacity: 0, y: 32 },
+            visibleOnce: { opacity: 1, y: 0, transition: { delay: 80 + i * 90, duration: 600, ease: [0.22, 0.61, 0.36, 1] } },
+          }"
+        >
           <button
             type="button"
             @click="open(h)"

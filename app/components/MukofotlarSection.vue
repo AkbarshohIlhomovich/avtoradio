@@ -49,7 +49,7 @@ const prizes: Prize[] = [
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 pb-20 md:pb-28">
 
       <!-- Stats strip: 4200 listeners → grand concert -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20 border-y-2 border-black/85 py-8 md:py-10">
+      <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20 border-y-2 border-black/85 py-8 md:py-10">
         <div>
           <div class="text-[44px] md:text-[64px] leading-none font-extrabold text-black tabular-nums">4200</div>
           <div class="mt-2 text-[12px] tracking-[0.22em] uppercase font-semibold text-black/70">ta omadli tinglovchi</div>
@@ -66,7 +66,14 @@ const prizes: Prize[] = [
 
       <!-- Prize grid -->
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
-        <li v-for="p in prizes" :key="p.title">
+        <li
+          v-for="(p, i) in prizes"
+          :key="p.title"
+          v-motion="{
+            initial: { opacity: 0, y: 40 },
+            visibleOnce: { opacity: 1, y: 0, transition: { delay: 80 + i * 110, duration: 650, ease: [0.22, 0.61, 0.36, 1] } },
+          }"
+        >
           <article class="group relative bg-black text-white h-full flex flex-col overflow-hidden">
             <!-- Image header -->
             <div class="relative aspect-[16/10] overflow-hidden">

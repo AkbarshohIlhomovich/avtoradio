@@ -41,7 +41,7 @@ const coverage = ['Toshkent shahar', 'Toshkent viloyati', 'Sirdaryo viloyati']
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0">
 
       <!-- ─── Top row: studio info + coverage ─── -->
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-10 md:gap-14 border-y-2 border-black/85 py-12 md:py-16">
+      <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-10 md:gap-14 border-y-2 border-black/85 py-12 md:py-16">
         <div>
           <span class="block text-[11px] tracking-[0.32em] uppercase font-bold text-black/70 mb-3">Studiya manzili</span>
           <h2 class="text-[28px] md:text-[38px] font-bold italic uppercase leading-[1.05] text-black">
@@ -71,14 +71,21 @@ const coverage = ['Toshkent shahar', 'Toshkent viloyati', 'Sirdaryo viloyati']
       </div>
 
       <!-- ─── Channels grid ─── -->
-      <div class="py-12 md:py-16">
+      <div v-motion-slide-visible-once-bottom class="py-12 md:py-16">
         <span class="block text-[11px] tracking-[0.32em] uppercase font-bold text-black/70 mb-3">Bog‘lanish kanallari</span>
         <h3 class="text-[28px] md:text-[40px] font-bold italic uppercase leading-[1.05] text-black mb-10 md:mb-12">
           Bizga yozing
         </h3>
 
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-          <li v-for="ch in channels" :key="ch.label">
+          <li
+            v-for="(ch, i) in channels"
+            :key="ch.label"
+            v-motion="{
+              initial: { opacity: 0, y: 30 },
+              visibleOnce: { opacity: 1, y: 0, transition: { delay: 80 + i * 100, duration: 600, ease: [0.22, 0.61, 0.36, 1] } },
+            }"
+          >
             <a
               :href="ch.href"
               class="channel group block h-full bg-y border-2 border-black p-6 md:p-7 relative overflow-hidden transition-colors"
@@ -97,7 +104,7 @@ const coverage = ['Toshkent shahar', 'Toshkent viloyati', 'Sirdaryo viloyati']
       </div>
 
       <!-- ─── Socials + map row ─── -->
-      <div class="grid grid-cols-1 md:grid-cols-[340px_1fr] gap-10 md:gap-12 border-t-2 border-black/85 py-12 md:py-16">
+      <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 md:grid-cols-[340px_1fr] gap-10 md:gap-12 border-t-2 border-black/85 py-12 md:py-16">
         <div>
           <span class="block text-[11px] tracking-[0.32em] uppercase font-bold text-black/70 mb-3">Ijtimoiy tarmoqlar</span>
           <h3 class="text-[22px] md:text-[26px] font-bold italic uppercase leading-[1.1] text-black mb-6">

@@ -93,6 +93,10 @@ const projects: Project[] = [
         <li
           v-for="(p, i) in projects"
           :key="p.title"
+          v-motion="{
+            initial: { opacity: 0, y: 40 },
+            visibleOnce: { opacity: 1, y: 0, transition: { duration: 700, ease: [0.22, 0.61, 0.36, 1] } },
+          }"
           class="py-14 md:py-20"
         >
           <article

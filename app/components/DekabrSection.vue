@@ -49,7 +49,7 @@ const pillars = [
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0">
 
       <!-- ─── Top: gala-konsert hero ─── -->
-      <div class="border-y-2 border-black/85 py-12 md:py-16">
+      <div v-motion-slide-visible-once-bottom class="border-y-2 border-black/85 py-12 md:py-16">
         <div class="text-[11px] tracking-[0.32em] uppercase font-bold text-black/70">
           Dekabr · Xalqlar do‘stligi san’at saroyi
         </div>
@@ -75,7 +75,7 @@ const pillars = [
       </div>
 
       <!-- ─── Sticker campaign ─── -->
-      <div class="py-14 md:py-20 grid grid-cols-1 md:grid-cols-[1fr_320px] gap-10 md:gap-14 items-center border-b-2 border-black/85">
+      <div v-motion-slide-visible-once-bottom class="py-14 md:py-20 grid grid-cols-1 md:grid-cols-[1fr_320px] gap-10 md:gap-14 items-center border-b-2 border-black/85">
         <div>
           <span class="block text-[11px] tracking-[0.32em] uppercase font-bold text-black/70 mb-4">Kuzgi mega-loyiha</span>
           <h3 class="text-[28px] md:text-[40px] font-bold italic uppercase leading-[1.05] text-black">
@@ -100,7 +100,7 @@ const pillars = [
       </div>
 
       <!-- ─── Mission pillars ─── -->
-      <div class="py-14 md:py-20">
+      <div v-motion-slide-visible-once-bottom class="py-14 md:py-20">
         <div class="max-w-[700px]">
           <span class="block text-[11px] tracking-[0.32em] uppercase font-bold text-black/70 mb-3">Yakuniy maqsad</span>
           <h3 class="text-[28px] md:text-[40px] font-bold italic uppercase leading-[1.05] text-black">
@@ -115,6 +115,10 @@ const pillars = [
           <li
             v-for="(p, i) in pillars"
             :key="p.title"
+            v-motion="{
+              initial: { opacity: 0, y: 28 },
+              visibleOnce: { opacity: 1, y: 0, transition: { delay: 100 + i * 120, duration: 600, ease: [0.22, 0.61, 0.36, 1] } },
+            }"
             class="pillar group relative overflow-hidden border-t-2 border-black/85 pt-5 pb-6 px-4 md:px-5"
           >
             <!-- Black sliding overlay from top -->

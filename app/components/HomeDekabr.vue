@@ -29,14 +29,14 @@ const blocks = computed(() => [
   <section class="bg-y">
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
 
-      <header>
+      <header v-motion-slide-visible-once-bottom>
         <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-black/70 mb-3">Dekabr</span>
         <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic uppercase text-black tracking-tight">
           10 YIL ON AIR
         </h2>
       </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-12 md:gap-16 items-center">
+      <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-12 md:gap-16 items-center">
 
         <div>
 

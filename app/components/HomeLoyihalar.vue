@@ -13,7 +13,7 @@ const featured = [
   <section class="bg-y">
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
 
-      <header class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <header v-motion-slide-visible-once-bottom class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-black/70 mb-3">Loyihalar</span>
           <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-black tracking-tight">
@@ -30,7 +30,14 @@ const featured = [
       </header>
 
       <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-        <li v-for="p in featured" :key="p.title">
+        <li
+          v-for="(p, i) in featured"
+          :key="p.title"
+          v-motion="{
+            initial: { opacity: 0, y: 32 },
+            visibleOnce: { opacity: 1, y: 0, transition: { delay: 80 + i * 100, duration: 650, ease: [0.22, 0.61, 0.36, 1] } },
+          }"
+        >
           <NuxtLink to="/loyihalar" class="group block">
             <div class="relative aspect-[4/3] overflow-hidden bg-black">
               <img

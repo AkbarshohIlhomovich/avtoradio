@@ -13,7 +13,7 @@ const hosts = [
     <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
 
       <!-- Section header -->
-      <header class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <header v-motion-slide-visible-once-bottom class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-y/70 mb-3">Boshlovchilar</span>
           <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-white tracking-tight">
@@ -30,7 +30,14 @@ const hosts = [
       </header>
 
       <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-5">
-        <li v-for="h in hosts" :key="h.name">
+        <li
+          v-for="(h, i) in hosts"
+          :key="h.name"
+          v-motion="{
+            initial: { opacity: 0, y: 32 },
+            visibleOnce: { opacity: 1, y: 0, transition: { delay: 80 + i * 90, duration: 600, ease: [0.22, 0.61, 0.36, 1] } },
+          }"
+        >
           <NuxtLink :to="`/boshlovchilar`" class="group block">
             <div class="aspect-square overflow-hidden bg-black/10">
               <img

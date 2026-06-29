@@ -58,6 +58,9 @@ onBeforeUnmount(() => {
       <button
         type="button"
         @click="toggleLive"
+        v-motion
+        :initial="{ opacity: 0, y: 60 }"
+        :enter="{ opacity: 1, y: 0, transition: { delay: 300, duration: 700, ease: [0.22, 0.61, 0.36, 1] } }"
         class="hidden md:flex items-center text-black absolute top-[102px] left-[358px] hover:opacity-80 transition-opacity gap-[11px]"
         aria-label="ON AIR"
       >
