@@ -155,6 +155,6 @@ const year = 2026
           <span class="font-bold text-white/70 group-hover:text-y transition-colors">Eurosoft.uz</span>
         </a>
       </div>
-    </div>
+    </div> 
   </footer>
 </template>
