@@ -11,13 +11,22 @@ const side = [
 
 <template>
   <section class="bg-black text-white">
-    <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto px-4 md:px-0 py-14 md:py-20">
+    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
 
-      <header class="mb-12 md:mb-16">
-        <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-y/70 mb-3">Mukofotlar</span>
-        <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-white tracking-tight">
-          Yubiley jamg‘armasi.
-        </h2>
+      <header class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-y/70 mb-3">Mukofotlar</span>
+          <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-white tracking-tight">
+            Yubiley jamg‘armasi.
+          </h2>
+        </div>
+        <NuxtLink
+          to="/mukofotlar"
+          class="group inline-flex items-center gap-2 self-start md:self-end text-[12px] tracking-[0.18em] uppercase font-bold text-y hover:gap-4 transition-all whitespace-nowrap"
+        >
+          Mukofotlar tizimi
+          <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+        </NuxtLink>
       </header>
 
       <!-- 2-column mosaic: big featured + 3 stacked -->

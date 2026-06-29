@@ -19,7 +19,7 @@ const year = 2026
 
 <template>
   <footer class="bg-black text-white">
-    <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto px-4 md:px-0 py-14 md:py-16">
+    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-16">
 
       <!-- Top row: brand · nav · contacts -->
       <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-10 md:gap-16 mb-12 md:mb-14">
@@ -68,20 +68,74 @@ const year = 2026
         </div>
       </div>
 
-      <!-- Socials -->
-      <div class="border-t border-white/12 pt-7 mb-7 flex flex-wrap items-center gap-3">
-        <span class="text-[10px] tracking-[0.28em] uppercase font-bold text-y/65 mr-2">Kuzating</span>
-        <a
-          v-for="s in social"
-          :key="s.name"
-          :href="s.href"
-          target="_blank"
-          rel="noopener"
-          :aria-label="s.name"
-          class="w-9 h-9 inline-flex items-center justify-center bg-white/8 hover:bg-y rounded-full transition-colors group"
-        >
-          <img :src="s.img" alt="" aria-hidden="true" class="w-4 h-4 object-contain invert brightness-200 group-hover:invert-0 group-hover:brightness-100 transition-all"/>
-        </a>
+      <!-- Socials + Apps row -->
+      <div class="border-t border-white/12 pt-7 mb-7 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="text-[10px] tracking-[0.28em] uppercase font-bold text-y/65 mr-2">Kuzating</span>
+          <a
+            v-for="s in social"
+            :key="s.name"
+            :href="s.href"
+            target="_blank"
+            rel="noopener"
+            :aria-label="s.name"
+            class="w-9 h-9 inline-flex items-center justify-center bg-white/8 hover:bg-y rounded-full transition-colors group"
+          >
+            <img :src="s.img" alt="" aria-hidden="true" class="w-4 h-4 object-contain invert brightness-200 group-hover:invert-0 group-hover:brightness-100 transition-all"/>
+          </a>
+        </div>
+
+        <!-- App Store / Google Play -->
+        <div class="flex flex-col sm:flex-row gap-2">
+          <a
+            href="https://apps.apple.com/uz/app/avtoradio/id6741562744"
+            target="_blank"
+            rel="noopener"
+            aria-label="App Store"
+            class="flex items-center gap-2.5 bg-white/8 hover:bg-y hover:text-black text-white rounded-lg px-3.5 py-2 border border-white/12 transition-colors"
+          >
+            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current flex-shrink-0">
+              <path d="M17.05 12.04c-.03-2.94 2.4-4.36 2.5-4.43-1.36-2-3.48-2.27-4.24-2.3-1.8-.18-3.52 1.06-4.44 1.06-.92 0-2.34-1.04-3.84-1.01-1.98.03-3.8 1.15-4.82 2.93-2.06 3.56-.52 8.83 1.48 11.72.98 1.42 2.14 3.01 3.66 2.95 1.46-.06 2.02-.95 3.8-.95 1.78 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.86 1.12-1.64 1.58-3.23 1.6-3.31-.04-.02-3.07-1.18-3.07-4.72zM14.16 3.4c.8-.97 1.34-2.32 1.19-3.66-1.16.05-2.55.77-3.38 1.74-.74.86-1.39 2.23-1.22 3.55 1.29.1 2.61-.66 3.41-1.63z"/>
+            </svg>
+            <span class="flex flex-col leading-tight">
+              <span class="text-[8px] tracking-[0.04em]">Yuklab oling</span>
+              <span class="text-[13px] font-semibold tracking-tight -mt-0.5">App Store</span>
+            </span>
+          </a>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.eurosoft.avtoradio"
+            target="_blank"
+            rel="noopener"
+            aria-label="Google Play"
+            class="flex items-center gap-2.5 bg-white/8 hover:bg-y hover:text-black text-white rounded-lg px-3.5 py-2 border border-white/12 transition-colors"
+          >
+            <svg viewBox="0 0 512 512" class="w-5 h-5 flex-shrink-0">
+              <defs>
+                <linearGradient id="fp-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00C3FF"/><stop offset="100%" stop-color="#00E5A1"/>
+                </linearGradient>
+                <linearGradient id="fp-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFD400"/><stop offset="100%" stop-color="#FFA801"/>
+                </linearGradient>
+                <linearGradient id="fp-grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF3A44"/><stop offset="100%" stop-color="#C31162"/>
+                </linearGradient>
+                <linearGradient id="fp-grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00A0FF"/><stop offset="100%" stop-color="#00CFFF"/>
+                </linearGradient>
+              </defs>
+              <path fill="url(#fp-grad4)" d="M37 22c-7 7-11 18-11 32v404c0 14 4 25 11 32l1 1 226-226v-5L38 21z"/>
+              <path fill="url(#fp-grad2)" d="M340 338l-76-76v-6l76-76 2 1 89 50c26 14 26 38 0 53l-89 51z"/>
+              <path fill="url(#fp-grad3)" d="M342 337L264 259 37 487c8 9 22 11 38 2l267-152"/>
+              <path fill="url(#fp-grad1)" d="M342 181L75 30C59 21 45 23 37 32l227 227z"/>
+            </svg>
+            <span class="flex flex-col leading-tight">
+              <span class="text-[8px] tracking-[0.04em]">Yuklab oling</span>
+              <span class="text-[13px] font-semibold tracking-tight -mt-0.5">Google Play</span>
+            </span>
+          </a>
+        </div>
       </div>
 
       <!-- Bottom strip -->

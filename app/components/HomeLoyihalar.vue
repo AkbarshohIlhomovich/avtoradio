@@ -11,13 +11,22 @@ const featured = [
 
 <template>
   <section class="bg-y">
-    <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto px-4 md:px-0 py-14 md:py-20">
+    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
 
-      <header class="mb-12 md:mb-16">
-        <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-black/70 mb-3">Loyihalar</span>
-        <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-black tracking-tight">
-          15 ta loyiha, tongdan kechgacha.
-        </h2>
+      <header class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-black/70 mb-3">Loyihalar</span>
+          <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-black tracking-tight">
+            15 ta loyiha, tongdan kechgacha.
+          </h2>
+        </div>
+        <NuxtLink
+          to="/loyihalar"
+          class="group inline-flex items-center gap-2 self-start md:self-end text-[12px] tracking-[0.18em] uppercase font-bold text-black hover:gap-4 transition-all whitespace-nowrap"
+        >
+          Barcha loyihalar
+          <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+        </NuxtLink>
       </header>
 
       <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">

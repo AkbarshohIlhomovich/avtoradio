@@ -46,7 +46,7 @@ const prizes: Prize[] = [
 
 <template>
   <section id="mukofotlar" class="bg-y">
-    <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto px-4 md:px-0 pb-20 md:pb-28">
+    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 pb-20 md:pb-28">
 
       <!-- Stats strip: 4200 listeners → grand concert -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20 border-y-2 border-black/85 py-8 md:py-10">

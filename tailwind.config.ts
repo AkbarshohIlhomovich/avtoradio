@@ -38,10 +38,10 @@ export default {
         serif: ['"Open Sans"', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
-        content: '980px',
+        content: '1200px',
       },
       width: {
-        content: '980px',
+        content: '1200px',
       },
       animation: {
         pulse: 'pulse 1.8s infinite',

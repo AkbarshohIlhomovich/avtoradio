@@ -40,7 +40,7 @@ onBeforeUnmount(() => {
 
 <template>
   <header class="absolute top-0 left-0 right-0 z-40 h-[180px] md:h-[220px]">
-    <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto h-full px-4 md:px-0 relative">
+    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto h-full px-4 md:px-0 relative">
       <!-- BRAND BLOCK -->
       <NuxtLink to="/" class="brand-link group absolute top-[16px] md:top-[23px] left-2 md:left-0 flex items-start gap-3 md:gap-[21px]">
         <span class="brand-box relative block w-[80px] h-[90px] md:w-[107px] md:h-[120px] flex-shrink-0 overflow-hidden rounded-sm transition-colors duration-200">

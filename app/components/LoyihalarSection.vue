@@ -86,7 +86,7 @@ const projects: Project[] = [
 
 <template>
   <section id="loyihalar" class="bg-y">
-    <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto px-4 md:px-0">
+    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0">
 
       <!-- Project rows: alternating image left / image right -->
       <ul class="divide-y divide-[#5BBFBA]/80">

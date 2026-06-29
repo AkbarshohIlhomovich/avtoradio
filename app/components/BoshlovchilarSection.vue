@@ -104,7 +104,7 @@ onBeforeUnmount(() => {
 
 <template>
   <section id="efir" class="bg-white py-16 md:py-24">
-    <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto px-4 md:px-0">
+    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0">
       <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-12">
         <li v-for="h in hosts" :key="h.name">
           <button

@@ -27,17 +27,18 @@ const blocks = computed(() => [
 
 <template>
   <section class="bg-y">
-    <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto px-4 md:px-0 py-14 md:py-20">
+    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
+
+      <header>
+        <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-black/70 mb-3">Dekabr</span>
+        <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic uppercase text-black tracking-tight">
+          10 YIL ON AIR
+        </h2>
+      </header>
 
       <div class="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-12 md:gap-16 items-center">
 
         <div>
-          <header class="mb-8 md:mb-10">
-            <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-black/70 mb-3">Dekabr</span>
-            <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic uppercase text-black tracking-tight">
-              10 YIL ON AIR
-            </h2>
-          </header>
 
           <!-- Countdown -->
           <div class="grid grid-cols-4 gap-2 md:gap-3 max-w-[440px]">
