@@ -38,7 +38,7 @@ const coverage = ['Toshkent shahar', 'Toshkent viloyati', 'Sirdaryo viloyati']
 
 <template>
   <section id="aloqa" class="bg-y">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0">
+    <div class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0">
 
       <!-- ─── Top row: studio info + coverage ─── -->
       <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-10 md:gap-14 border-y-2 border-black/85 py-12 md:py-16">

@@ -32,18 +32,18 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="absolute top-0 left-0 right-0 z-40 h-[180px] md:h-[220px]">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto h-full px-4 md:px-0 relative">
+  <header class="absolute top-0 left-0 right-0 z-40 h-[180px] md:h-[220px] px-2 md:px-6 xl:px-0">
+    <div class="w-full max-w-[1200px] mx-auto h-full relative">
       <!-- BRAND BLOCK -->
-      <NuxtLink to="/" class="brand-link group absolute top-[16px] md:top-[23px] left-2 md:left-0 flex items-start gap-3 md:gap-[21px]">
-        <span class="brand-box relative block w-[80px] h-[90px] md:w-[107px] md:h-[120px] flex-shrink-0 overflow-hidden rounded-sm transition-colors duration-200">
+      <NuxtLink to="/" class="brand-link group absolute top-[16px] md:top-[23px] left-2 md:left-0 flex items-start gap-2.5 md:gap-[21px]">
+        <span class="brand-box relative block w-[56px] h-[64px] md:w-[107px] md:h-[120px] flex-shrink-0 overflow-hidden rounded-sm transition-colors duration-200">
           <img src="/logo-default.png" alt="AVTORADIO" class="brand-img-default absolute inset-0 w-full h-full object-contain transition-opacity duration-200"/>
           <img src="/logo-hover.png"   alt="" aria-hidden="true" class="brand-img-hover absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-200"/>
           <img src="/logo-real.png"    alt="" aria-hidden="true" class="brand-img-active absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-200"/>
         </span>
         <div class="text-white pt-0 md:pt-[2px]">
-          <div class="font-normal text-[32px] md:text-[50px] md:leading-[70px]">AVTORADIO</div>
-          <div class="text-[14px] md:text-[20px] md:leading-[28px] mt-1 md:mt-[14px]">YOLIMIZ BIR 102 FM</div>
+          <div class="font-normal text-[22px] leading-[26px] md:text-[50px] md:leading-[70px]">AVTORADIO</div>
+          <div class="text-[10px] leading-[14px] md:text-[20px] md:leading-[28px] mt-0.5 md:mt-[14px] tracking-wide">YOLIMIZ BIR · 102 FM</div>
         </div>
       </NuxtLink>
 
@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
         v-motion
         :initial="{ opacity: 0, y: 60 }"
         :enter="{ opacity: 1, y: 0, transition: { delay: 300, duration: 700, ease: [0.22, 0.61, 0.36, 1] } }"
-        class="hidden md:flex items-center text-black absolute top-[102px] left-[358px] hover:opacity-80 transition-opacity gap-[11px]"
+        class="hidden xl:flex items-center text-black absolute top-[102px] left-[358px] hover:opacity-80 transition-opacity gap-[11px]"
         aria-label="ON AIR"
       >
         <span class="w-[40px] h-[40px] flex items-center justify-center fill-black">
@@ -88,7 +88,7 @@ onBeforeUnmount(() => {
           <img src="/icon-burger-active.png" alt="" aria-hidden="true" class="burger-active  absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-150"/>
         </button>
 
-        <ul class="grid grid-cols-2 gap-x-0 gap-y-[4px] mt-[5px]">
+        <ul class="hidden md:grid grid-cols-2 gap-x-0 gap-y-[4px] mt-[5px]">
           <li v-for="s in social" :key="s.name" class="m-0">
             <a :href="s.href" target="_blank" rel="noopener" :aria-label="s.name"
                class="social-link block flex items-center justify-center hover:opacity-70 transition-opacity"

@@ -27,7 +27,7 @@ const blocks = computed(() => [
 
 <template>
   <section class="bg-y">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
+    <div class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0 py-14 md:py-20">
 
       <header v-motion-slide-visible-once-bottom>
         <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-black/70 mb-3">Dekabr</span>

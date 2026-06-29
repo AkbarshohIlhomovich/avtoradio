@@ -11,7 +11,7 @@ const featured = [
 
 <template>
   <section class="bg-y">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
+    <div class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0 py-14 md:py-20">
 
       <header v-motion-slide-visible-once-bottom class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>

@@ -10,7 +10,7 @@ const hosts = [
 
 <template>
   <section class="bg-black text-white">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
+    <div class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0 py-14 md:py-20">
 
       <!-- Section header -->
       <header v-motion-slide-visible-once-bottom class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -29,7 +29,7 @@ const hosts = [
         </NuxtLink>
       </header>
 
-      <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-5">
+      <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
         <li
           v-for="(h, i) in hosts"
           :key="h.name"

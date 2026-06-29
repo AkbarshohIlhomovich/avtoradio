@@ -46,7 +46,7 @@ const pillars = [
 
 <template>
   <section id="dekabr" class="bg-y">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0">
+    <div class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0">
 
       <!-- ─── Top: gala-konsert hero ─── -->
       <div v-motion-slide-visible-once-bottom class="border-y-2 border-black/85 py-12 md:py-16">

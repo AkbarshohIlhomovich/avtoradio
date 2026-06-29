@@ -19,7 +19,7 @@ const year = 2026
 
 <template>
   <footer class="bg-black text-white">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-16">
+    <div class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0 py-14 md:py-16">
 
       <!-- Top row: brand · nav · contacts -->
       <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-10 md:gap-16 mb-12 md:mb-14">

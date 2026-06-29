@@ -11,7 +11,7 @@ const side = [
 
 <template>
   <section class="bg-black text-white">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-14 md:py-20">
+    <div class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0 py-14 md:py-20">
 
       <header v-motion-slide-visible-once-bottom class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
@@ -30,12 +30,12 @@ const side = [
       </header>
 
       <!-- 2-column mosaic: big featured + 3 stacked -->
-      <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 md:h-[520px]">
+      <div v-motion-slide-visible-once-bottom class="grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-4 lg:h-[520px]">
 
         <!-- Featured card -->
         <NuxtLink
           to="/mukofotlar"
-          class="md:col-span-7 group relative block aspect-[4/3] md:aspect-auto md:h-full overflow-hidden"
+          class="lg:col-span-7 group relative block aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden"
         >
           <img :src="featured.img" :alt="featured.label" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10"></div>
@@ -51,12 +51,12 @@ const side = [
         </NuxtLink>
 
         <!-- Side stack -->
-        <div class="md:col-span-5 grid grid-cols-1 grid-rows-3 gap-3 md:gap-4">
+        <div class="lg:col-span-5 grid grid-cols-1 grid-rows-3 gap-3 md:gap-4">
           <NuxtLink
             v-for="p in side"
             :key="p.label"
             to="/mukofotlar"
-            class="group relative block overflow-hidden aspect-[3/2] md:aspect-auto"
+            class="group relative block overflow-hidden aspect-[3/2] lg:aspect-auto"
           >
             <img :src="p.img" :alt="p.label" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"/>
             <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent"></div>

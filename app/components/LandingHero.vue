@@ -47,9 +47,9 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section id="top" class="relative bg-y min-h-screen">
-    <div class="w-full md:w-[1200px] md:max-w-[1200px] mx-auto px-4 md:px-0 pt-[180px] md:pt-[223px] pb-10">
-      <div class="relative w-full md:w-[1200px] md:h-[700px] aspect-video md:aspect-auto bg-y overflow-hidden">
+  <section id="top" class="relative bg-y xl:min-h-screen">
+    <div class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0 pt-[180px] md:pt-[223px] pb-10">
+      <div class="relative w-full xl:h-[700px] aspect-video xl:aspect-auto bg-y overflow-hidden">
         <video
           ref="vid"
           class="w-full h-full object-cover"
