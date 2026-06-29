@@ -18,56 +18,7 @@ const menu: MenuItem[] = [
 ]
 
 const menuOpen = ref(false)
-const playing  = ref(false)
-const loading  = ref(false)
-const audio    = ref<HTMLAudioElement | null>(null)
-
-// Avtoradio 102 FM — Icecast live stream (HTTPS cert expired, fallback to HTTP on :8000)
-const STREAM_URLS = [
-  'http://fm102.uz:8000/autoradio',
-  'https://fm102.uz:8443/autoradio',
-]
-
-function buildAudio(): HTMLAudioElement {
-  const el = new Audio()
-  el.preload = 'none'
-  el.crossOrigin = 'anonymous'
-  el.volume = 0.9
-  el.addEventListener('playing', () => { loading.value = false; playing.value = true })
-  el.addEventListener('pause',   () => { playing.value = false })
-  el.addEventListener('waiting', () => { loading.value = true })
-  el.addEventListener('error',   () => { loading.value = false; playing.value = false; tryNextStream() })
-  return el
-}
-
-let streamIndex = 0
-function tryNextStream() {
-  if (!audio.value) return
-  streamIndex = (streamIndex + 1) % STREAM_URLS.length
-  audio.value.src = `${STREAM_URLS[streamIndex]}?t=${Date.now()}`
-  audio.value.play().catch(() => { loading.value = false; playing.value = false })
-}
-
-async function toggleLive() {
-  if (!audio.value) audio.value = buildAudio()
-
-  if (playing.value) {
-    audio.value.pause()
-    audio.value.src = ''
-    playing.value = false
-    loading.value = false
-    return
-  }
-
-  loading.value = true
-  streamIndex = 0
-  audio.value.src = `${STREAM_URLS[streamIndex]}?t=${Date.now()}`
-  try {
-    await audio.value.play()
-  } catch {
-    loading.value = false
-  }
-}
+const { playing, loading, toggle: toggleLive } = useLivePlayer()
 
 function openMenu()  { menuOpen.value = true;  document.body.style.overflow = 'hidden' }
 function closeMenu() { menuOpen.value = false; document.body.style.overflow = '' }
@@ -75,8 +26,6 @@ function onKey(e: KeyboardEvent) { if (e.key === 'Escape') closeMenu() }
 
 onMounted(() => window.addEventListener('keydown', onKey))
 onBeforeUnmount(() => {
-  audio.value?.pause()
-  audio.value = null
   window.removeEventListener('keydown', onKey)
   document.body.style.overflow = ''
 })
@@ -122,7 +71,7 @@ onBeforeUnmount(() => {
           </svg>
         </span>
         <span class="text-[25px] leading-[35px] font-normal whitespace-nowrap">
-          {{ loading ? 'YUKLANMOQDA' : playing ? 'ЭФИРДА' : 'ON AIR' }}
+          {{ loading ? 'YUKLANMOQDA' : playing ? 'EFIRDA' : 'ON AIR' }}
         </span>
       </button>
 

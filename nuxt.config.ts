@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'AVTO RADIO 102 FM — Орзулар тўлқини',
+      title: 'AVTO RADIO 102 FM — Orzular to‘lqini',
       htmlAttrs: { lang: 'uz' },
       meta: [
         { charset: 'utf-8' },
@@ -28,13 +28,13 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Авторадио 102 FM — катта шаҳарнинг соғлом пулси. Тонгги «Тараддуд», кундузги «Нурли кун», кечки «Сарҳисоб вақти» эфир блоклари ва «Орзулар тўлқини» концепцияси.',
+            'Avtoradio 102 FM — katta shaharning sog‘lom pulsi. Tonggi «Taraddud», kunduzgi «Nurli kun», kechki «Sarhisob vaqti» efir bloklari va «Orzular to‘lqini» kontseptsiyasi.',
         },
         { name: 'theme-color', content: '#FFCC00' },
         { property: 'og:title', content: 'AVTO RADIO 102 FM' },
         {
           property: 'og:description',
-          content: 'Йўлдаги ҳамроҳ. Тонгги тараддуд, кечки сарҳисоб, ҳаётий фалсафа.',
+          content: 'Yo‘ldagi hamroh. Tonggi taraddud, kechki sarhisob, hayotiy falsafa.',
         },
       ],
       link: [

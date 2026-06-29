@@ -27,58 +27,58 @@ interface Block {
 }
 
 const hosts: Host[] = [
-  { name: 'Nazira Inoyatova',     img: '/img/host-nazira.jpg',      block: 'A', blockName: 'Tongi blok',     time: '06:00 — 09:00', show: '«Тараддуд» radioshou',         role: 'Bosh boshlovchi' },
-  { name: 'Kamola Ermatova',      img: '/img/host-kamola.jpg',      block: 'B', blockName: 'Kundizgi blok',  time: '09:00 — 18:00', show: '«Нурли кун» dasturlari',       role: 'Olib boruvchi' },
-  { name: 'Nurmuhammad Isroilov', img: '/img/host-nurmuhammad.jpg', block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Сарҳисоб вақти — Кечки сафари', role: 'Bosh boshlovchi va muallif' },
-  { name: 'Jasur Xudoyberganov',  img: '/img/host-jasur.jpg',       block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Сарҳисоб вақти — Кечки сафари', role: 'Olib boruvchi' },
-  { name: 'Otabek Tojiboyev',     img: '/img/host-otabek.jpg',      block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Сарҳисоб вақти — Кечки сафари', role: 'Olib boruvchi' },
+  { name: 'Nazira Inoyatova',     img: '/img/host-nazira.jpg',      block: 'A', blockName: 'Tongi blok',     time: '06:00 — 09:00', show: '«Taraddud» radioshou',         role: 'Bosh boshlovchi' },
+  { name: 'Kamola Ermatova',      img: '/img/host-kamola.jpg',      block: 'B', blockName: 'Kundizgi blok',  time: '09:00 — 18:00', show: '«Nurli kun» dasturlari',       role: 'Olib boruvchi' },
+  { name: 'Nurmuhammad Isroilov', img: '/img/host-nurmuhammad.jpg', block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Sarhisob vaqti — Kechki safari', role: 'Bosh boshlovchi va muallif' },
+  { name: 'Jasur Xudoyberganov',  img: '/img/host-jasur.jpg',       block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Sarhisob vaqti — Kechki safari', role: 'Olib boruvchi' },
+  { name: 'Otabek Tojiboyev',     img: '/img/host-otabek.jpg',      block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Sarhisob vaqti — Kechki safari', role: 'Olib boruvchi' },
 ]
 
 const blocks: Record<'A' | 'B' | 'C', Block> = {
   A: {
     code: 'A',
-    subtitle: 'ТОНГГИ БЛОК ЛОЙИХАСИ:',
-    title: '"ТАРАДДУД" РАДИОШОУСИ',
+    subtitle: 'TONGGI BLOK LOYIXASI:',
+    title: '"TARADDUD" RADIOSHOUSI',
     pencil: '/img/pdf-tongi-main.jpg',
-    body: 'Шарқ фалсафасида "Тараддуд" тушунчаси инсоннинг ички оламида салбий ва ёмон фикрларни рад этиб, эзгуликни тафаккур қилиши ҳамда янги кунга тадорик кўришини англатади. Ушбу фалсафий асосга таяниб ташкил этилган 3 соатлик жонли интерактив шоу тингловчиларни яхши кайфият билан янги кунга тайёрлайди. Тонгда <strong>"Омадли қўнғироқ"</strong>, <strong>"Танаффус – мундиал 2026"</strong>, <strong>"Текин дастурхон"</strong> лойиҳалари ўтказилади.',
+    body: 'Sharq falsafasida "Taraddud" tushunchasi insonning ichki olamida salbiy va yomon fikrlarni rad etib, ezgulikni tafakkur qilishi hamda yangi kunga tadorik ko‘rishini anglatadi. Ushbu falsafiy asosga tayanib tashkil etilgan 3 soatlik jonli interaktiv shou tinglovchilarni yaxshi kayfiyat bilan yangi kunga tayyorlaydi. Tongda <strong>"Omadli qo‘ng‘iroq"</strong>, <strong>"Tanaffus – mundial 2026"</strong>, <strong>"Tekin dasturxon"</strong> loyihalari o‘tkaziladi.',
     bullets: [
-      { strong: 'Мукофот жамғармаси:', rest: '102 миллион сўм пул маблағи ва хорижга икки кишилик саёҳат йўлланмаси.' },
-      { strong: 'Ижтимоий масъулият:', rest: 'Лойиҳа давомида тингловчилар эътиборини жалб қилган ҳолда йўл ҳаракати хавфсизлиги, йўллардаги жорий ҳолат, авариялар ва тирбандликлар ҳақида тезкор ва ҳаётий муҳим маълумотлар бериб борилади.' },
+      { strong: 'Mukofot jamg‘armasi:', rest: '102 million so‘m pul mablag‘i va xorijga ikki kishilik sayohat yo‘llanmasi.' },
+      { strong: 'Ijtimoiy mas’uliyat:', rest: 'Loyiha davomida tinglovchilar e’tiborini jalb qilgan holda yo‘l harakati xavfsizligi, yo‘llardagi joriy holat, avariyalar va tirbandliklar haqida tezkor va hayotiy muhim ma’lumotlar berib boriladi.' },
     ],
     hosts: [
-      { first: 'Назира',  last: 'ИНОЯТОВА', img: '/img/host-nazira.jpg' },
-      { first: 'Мирзаёр', last: 'ЭРКИНОВ',  img: '/img/host-nurmuhammad.jpg' },
+      { first: 'Nazira',  last: 'INOYATOVA', img: '/img/host-nazira.jpg' },
+      { first: 'Mirzayor', last: 'ERKINOV',  img: '/img/host-nurmuhammad.jpg' },
     ],
   },
   B: {
     code: 'B',
-    subtitle: 'КУНДИЗГИ БЛОК ЛОЙИХАЛАРИ:',
-    title: '"НУРЛИ КУН" ДАСТУРЛАРИ',
+    subtitle: 'KUNDIZGI BLOK LOYIXALARI:',
+    title: '"NURLI KUN" DASTURLARI',
     pencil: '/img/pdf-kundizgi-main.jpg',
-    body: 'Бу пайтда тингловчиларнинг кундалик фаолияти энг қизғин нуқтага чиқади. Лойиҳа доирасида инсонларни ўзига ташқаридан қарашга ундовчи махсус <strong>"Халқона"</strong> лойиҳаси ишлайди. Унда кўчадаги қайноқ жараёнлар ва халқ ичидан келган овозли хабарлар "халқдан олиб халққа бериш" тамойили асосида эфирга узатилади.',
+    body: 'Bu paytda tinglovchilarning kundalik faoliyati eng qizg‘in nuqtaga chiqadi. Loyiha doirasida insonlarni o‘ziga tashqaridan qarashga undovchi maxsus <strong>"Xalqona"</strong> loyihasi ishlaydi. Unda ko‘chadagi qaynoq jarayonlar va xalq ichidan kelgan ovozli xabarlar "xalqdan olib xalqqa berish" tamoyili asosida efirga uzatiladi.',
     bullets: [
-      { strong: 'Асосий ўйинлар:', rest: '«Юзда юрма», «Хазина», «Топ Такси», «Зукко» — оригинал интерактив лойиҳалар.' },
-      { strong: 'Мукофот:', rest: '«Олтин чипта» эгаларига 102 грамм олтин қуймаси гранд-концертда ўйналади.' },
+      { strong: 'Asosiy o‘yinlar:', rest: '«Yuzda yurma», «Xazina», «Top Taksi», «Zukko» — original interaktiv loyihalar.' },
+      { strong: 'Mukofot:', rest: '«Oltin chipta» egalariga 102 gramm oltin quymasi grand-kontsertda o‘ynaladi.' },
     ],
     hosts: [
-      { first: 'Камола', last: 'ЕРМАТОВА', img: '/img/host-kamola.jpg' },
+      { first: 'Kamola', last: 'ERMATOVA', img: '/img/host-kamola.jpg' },
     ],
   },
   C: {
     code: 'C',
-    subtitle: 'КЕЧКИ БЛОК ЛОЙИХАЛАРИ:',
-    title: 'САРҲИСОБ ВАҚТИ — КЕЧКИ САФАРИ',
+    subtitle: 'KECHKI BLOK LOYIXALARI:',
+    title: 'SARHISOB VAQTI — KECHKI SAFARI',
     pencil: '/img/pdf-kechki-right.jpg',
     pencilRight: '/img/pdf-kechki-left.jpg',
-    body: 'Кечки 3 соатлик дастур инсонларнинг кунлик ишларини сарҳисоб қилиш, яъни "куннинг ҳисоботи" қилиш вақтига тўғри келади. <strong>"Тонна бензин"</strong>, <strong>"Кун ва якун"</strong>, <strong>"Love Love Show"</strong>, <strong>"Релакс формат"</strong> каби лойиҳалар орқали тингловчилар куннинг энг қизиқ онларини жонли эфирда бирга кечирадилар.',
+    body: 'Kechki 3 soatlik dastur insonlarning kunlik ishlarini sarhisob qilish, ya’ni "kunning hisoboti" qilish vaqtiga to‘g‘ri keladi. <strong>"Tonna benzin"</strong>, <strong>"Kun va yakun"</strong>, <strong>"Love Love Show"</strong>, <strong>"Relaks format"</strong> kabi loyihalar orqali tinglovchilar kunning eng qiziq onlarini jonli efirda birga kechiradilar.',
     bullets: [
-      { strong: 'Тонна бензин:', rest: 'Калит сўзни тўғри топган тингловчига тўлиқ бак бензин ва йил якунидаги автомобиль ўйини йўлланмаси.' },
-      { strong: 'Релакс формат (21:00 — 22:00):', rest: 'Нурмуҳаммад Исроиловнинг муаллифлик адабий дастури — нодир шеърий сатрлар ва мусиқалар.' },
+      { strong: 'Tonna benzin:', rest: 'Kalit so‘zni to‘g‘ri topgan tinglovchiga to‘liq bak benzin va yil yakunidagi avtomobil o‘yini yo‘llanmasi.' },
+      { strong: 'Relaks format (21:00 — 22:00):', rest: 'Nurmuhammad Isroilovning mualliflik adabiy dasturi — nodir she’riy satrlar va musiqalar.' },
     ],
     hosts: [
-      { first: 'Нурмуҳаммад', last: 'ИСРОИЛОВ',     img: '/img/host-nurmuhammad.jpg' },
-      { first: 'Жасур',       last: 'ХУДОЙБЕРГАНОВ', img: '/img/host-jasur.jpg' },
-      { first: 'Отабек',      last: 'ТОЖИБОЕВ',     img: '/img/host-otabek.jpg' },
+      { first: 'Nurmuhammad', last: 'ISROILOV',     img: '/img/host-nurmuhammad.jpg' },
+      { first: 'Jasur',       last: 'XUDOYBERGANOV', img: '/img/host-jasur.jpg' },
+      { first: 'Otabek',      last: 'TOJIBOEV',     img: '/img/host-otabek.jpg' },
     ],
   },
 }

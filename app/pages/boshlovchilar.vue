@@ -13,7 +13,7 @@ useHead({
         Bizning boshlovchilar.
       </h1>
       <p class="mt-6 max-w-[640px] text-[16px] md:text-[18px] leading-relaxed text-black/75">
-        Эфирнинг ҳар бир блокида сизга ҳамроҳ бўладиган овозлар. Қизиқтирган боshлoвчини босиб, унинг дастури билан танишинг.
+        Efirning har bir blokida sizga hamroh bo‘ladigan ovozlar. Qiziqtirgan boshlovchini bosib, uning dasturi bilan tanishing.
       </p>
     </section>
 
