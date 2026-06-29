@@ -4,3 +4,9 @@
 
 [functions]
   node_bundler = "esbuild"
+
+# Live Icecast proxy runs as an Edge Function so streaming stays
+# open indefinitely (regular Functions buffer + time out).
+[[edge_functions]]
+  path     = "/api/stream"
+  function = "stream"
