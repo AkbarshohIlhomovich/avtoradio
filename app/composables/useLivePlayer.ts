@@ -2,10 +2,13 @@
 // One Audio instance per browser session, reactive flags shared across
 // every component that calls useLivePlayer().
 
-const STREAM_URLS = [
-  'http://fm102.uz:8000/autoradio',
-  'https://fm102.uz:8443/autoradio',
-]
+// On HTTPS deployments the upstream HTTP Icecast stream is blocked
+// (mixed-content) and the HTTPS variant has an expired certificate,
+// so we proxy through our own /api/stream endpoint when on https://.
+// On http:// (localhost dev) we hit the Icecast server directly.
+const STREAM_URLS = typeof window !== 'undefined' && window.location.protocol === 'https:'
+  ? ['/api/stream']
+  : ['http://fm102.uz:8000/autoradio']
 
 const playing = ref(false)
 const loading = ref(false)
