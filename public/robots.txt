@@ -1,2 +1,5 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://avtoradio.uz/sitemap.xml

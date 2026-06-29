@@ -1,6 +1,17 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Mukofotlar',
+  description: 'AVTORADIO 102 FM 10 yillik yubiley mukofotlari tizimi: 102 million so‘m naqd pul, 102 gramm oltin quymasi, 2 ta yangi avtomobil va 2 ta xorijiy sayohat yo‘llanmasi. 4200 ta omadli tinglovchi yil davomida saralanadi.',
+  ogTitle: 'Avtoradio Mukofotlari — Yubiley Jamg‘armasi',
+  ogDescription: '102 mln so‘m, 102 g oltin, 2 ta avtomobil va 2 ta xorijiy sayohat — gala-konsertda jonli efirda topshiriladi.',
+  ogUrl: 'https://avtoradio.uz/mukofotlar',
+  ogImage: 'https://avtoradio.uz/og-cover.jpg',
+  twitterTitle: 'Avtoradio Mukofotlari',
+  twitterDescription: 'Yubiley jamg‘armasi — 102 mln so‘m va boshqa sovg‘alar.',
+})
+
 useHead({
-  title: 'Mukofotlar — AVTORADIO 102 FM',
+  link: [{ rel: 'canonical', href: 'https://avtoradio.uz/mukofotlar' }],
 })
 </script>
 

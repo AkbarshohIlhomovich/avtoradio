@@ -1,6 +1,17 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Aloqa',
+  description: 'AVTORADIO 102 FM aloqa kanallari: XALQONA Telegram (+998 97 710 10 20), studiya jonli efir (+998 71 200 10 20), reklama (sales@avtoradio.uz). Toshkent, Toshkent viloyati va Sirdaryo bo‘ylab efir qamrovi.',
+  ogTitle: 'Avtoradio Aloqa — Bizga yozing',
+  ogDescription: 'Telegram orqali ovozli xabar, jonli efir telefon raqami, reklama va hamkorlik takliflari.',
+  ogUrl: 'https://avtoradio.uz/aloqa',
+  ogImage: 'https://avtoradio.uz/og-cover.jpg',
+  twitterTitle: 'Avtoradio Aloqa',
+  twitterDescription: 'Telegram, studiya telefoni, reklama va hamkorlik.',
+})
+
 useHead({
-  title: 'Aloqa — AVTORADIO 102 FM',
+  link: [{ rel: 'canonical', href: 'https://avtoradio.uz/aloqa' }],
 })
 </script>
 

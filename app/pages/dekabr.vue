@@ -1,6 +1,17 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Dekabr — 10 Yil On Air',
+  description: 'AVTORADIO 102 FM 10 yilligi munosabati bilan dekabr oyida Xalqlar do‘stligi san‘at saroyida bo‘lib o‘tadigan «10 Yil On Air» gala-konserti. Kuzgi stiker aksiyasi, yakuniy maqsadlar va katta shaharning sog‘lom pulsi falsafasi.',
+  ogTitle: '10 YIL ON AIR — Dekabr Gala-Konserti',
+  ogDescription: 'Xalqlar do‘stligi san‘at saroyida — yil yakunidagi yirik media-shou. Yil davomidagi g‘oliblar, sodiq tinglovchilar va sheriklar bir sahnada.',
+  ogUrl: 'https://avtoradio.uz/dekabr',
+  ogImage: 'https://avtoradio.uz/og-cover.jpg',
+  twitterTitle: '10 YIL ON AIR — Dekabr',
+  twitterDescription: 'Avtoradio 102 FM 10 yilligi gala-konserti.',
+})
+
 useHead({
-  title: 'Dekabr — 10 Yil On Air — AVTORADIO 102 FM',
+  link: [{ rel: 'canonical', href: 'https://avtoradio.uz/dekabr' }],
 })
 </script>
 

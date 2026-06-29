@@ -6,7 +6,7 @@ function openChat() {
 </script>
 
 <template>
-  <button
+  <!-- <button
     type="button"
     @click="openChat"
     aria-label="Bizga yozing"
@@ -18,5 +18,5 @@ function openChat() {
       </svg>
     </span>
     <span class="hidden sm:inline text-[14px] font-medium leading-none">Bizga yozing</span>
-  </button>
+  </button> -->
 </template>

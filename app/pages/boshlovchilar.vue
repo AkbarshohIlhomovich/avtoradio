@@ -1,6 +1,17 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Boshlovchilar',
+  description: 'AVTORADIO 102 FM boshlovchilari — Nazira Inoyatova, Kamola Ermatova, Nurmuhammad Isroilov, Jasur Xudoyberganov, Otabek Tojiboyev. Tonggi, kunduzgi va kechki bloklarning ovozlari.',
+  ogTitle: 'Avtoradio Boshlovchilari',
+  ogDescription: 'Efirning har bir blokida sizga hamroh bo‘ladigan 5 ta ovoz — Nazira, Kamola, Nurmuhammad, Jasur va Otabek.',
+  ogUrl: 'https://avtoradio.uz/boshlovchilar',
+  ogImage: 'https://avtoradio.uz/og-cover.jpg',
+  twitterTitle: 'Avtoradio Boshlovchilari',
+  twitterDescription: 'Tonggi, kunduzgi va kechki bloklarning ovozlari.',
+})
+
 useHead({
-  title: 'Boshlovchilar — AVTORADIO 102 FM',
+  link: [{ rel: 'canonical', href: 'https://avtoradio.uz/boshlovchilar' }],
 })
 </script>
 

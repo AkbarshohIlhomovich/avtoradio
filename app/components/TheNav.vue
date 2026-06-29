@@ -35,8 +35,8 @@ onBeforeUnmount(() => {
   <header class="absolute top-0 left-0 right-0 z-40 h-[180px] md:h-[220px] px-2 md:px-6 xl:px-0">
     <div class="w-full max-w-[1200px] mx-auto h-full relative">
       <!-- BRAND BLOCK -->
-      <NuxtLink to="/" class="brand-link group absolute top-[16px] md:top-[23px] left-2 md:left-0 flex items-start gap-2.5 md:gap-[21px]">
-        <span class="brand-box relative block w-[56px] h-[64px] md:w-[107px] md:h-[120px] flex-shrink-0 overflow-hidden rounded-sm transition-colors duration-200">
+      <NuxtLink to="/" class="brand-link2 group absolute top-[16px] md:top-[23px] left-2 md:left-0 flex items-start gap-2.5 md:gap-[21px]">
+        <span class="brand-box brand-link relative block w-[56px] h-[64px] md:w-[107px] md:h-[120px] flex-shrink-0 overflow-hidden rounded-sm transition-colors duration-200">
           <img src="/logo-default.png" alt="AVTORADIO" class="brand-img-default absolute inset-0 w-full h-full object-contain transition-opacity duration-200"/>
           <img src="/logo-hover.png"   alt="" aria-hidden="true" class="brand-img-hover absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-200"/>
           <img src="/logo-real.png"    alt="" aria-hidden="true" class="brand-img-active absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-200"/>
@@ -143,7 +143,7 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.brand-link:hover .brand-box { background-color: #FBC608; }
+.brand-link2:hover .brand-box { background-color: #FBC608; }
 .brand-link:hover .brand-img-default { opacity: 0; }
 .brand-link:hover .brand-img-hover   { opacity: 1; }
 .brand-link:active .brand-img-default,
