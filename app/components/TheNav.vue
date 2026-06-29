@@ -31,7 +31,7 @@ onBeforeUnmount(() => {
 })
 </script>
 
-<template>
+<template> 
   <header class="absolute top-0 left-0 right-0 z-40 h-[180px] md:h-[220px] px-2 md:px-6 xl:px-0">
     <div class="w-full max-w-[1200px] mx-auto h-full relative">
       <!-- BRAND BLOCK -->
