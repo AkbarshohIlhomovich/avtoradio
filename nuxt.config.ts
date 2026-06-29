@@ -17,6 +17,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'AVTO RADIO 102 FM — Орзулар тўлқини',
       htmlAttrs: { lang: 'uz' },

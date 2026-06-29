@@ -7,9 +7,10 @@ const social = [
   { name: 'Telegram',  href: 'https://t.me/avtoradio_102fm',       img: '/icon-telegram.png',  w: 39, h: 39 },
 ]
 
-const menu = [
-  { label: 'Bosh sahifa',   href: '#top' },
-  { label: 'Boshlovchilar', href: '#efir' },
+interface MenuItem { label: string; to?: string; href?: string }
+const menu: MenuItem[] = [
+  { label: 'Bosh sahifa',   to:   '/' },
+  { label: 'Boshlovchilar', to:   '/boshlovchilar' },
   { label: 'Loyihalar',     href: '#projects' },
   { label: 'Mukofotlar',    href: '#awards' },
   { label: 'Dekabr',        href: '#strategy' },
@@ -41,7 +42,7 @@ onBeforeUnmount(() => {
   <header class="absolute top-0 left-0 right-0 z-40 h-[180px] md:h-[220px]">
     <div class="w-full md:w-[980px] md:max-w-[980px] mx-auto h-full px-4 md:px-0 relative">
       <!-- BRAND BLOCK -->
-      <a href="#top" class="brand-link group absolute top-[16px] md:top-[23px] left-2 md:left-0 flex items-start gap-3 md:gap-[21px]">
+      <NuxtLink to="/" class="brand-link group absolute top-[16px] md:top-[23px] left-2 md:left-0 flex items-start gap-3 md:gap-[21px]">
         <span class="brand-box relative block w-[80px] h-[90px] md:w-[107px] md:h-[120px] flex-shrink-0 overflow-hidden rounded-sm transition-colors duration-200">
           <img src="/logo-default.png" alt="AVTORADIO" class="brand-img-default absolute inset-0 w-full h-full object-contain transition-opacity duration-200"/>
           <img src="/logo-hover.png"   alt="" aria-hidden="true" class="brand-img-hover absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-200"/>
@@ -51,7 +52,7 @@ onBeforeUnmount(() => {
           <div class="font-normal text-[32px] md:text-[50px] md:leading-[70px]">AVTORADIO</div>
           <div class="text-[14px] md:text-[20px] md:leading-[28px] mt-1 md:mt-[14px]">YOLIMIZ BIR 102 FM</div>
         </div>
-      </a>
+      </NuxtLink>
 
       <!-- ON AIR -->
       <button
@@ -111,8 +112,20 @@ onBeforeUnmount(() => {
           </svg>
         </button>
         <nav class="flex-1 flex flex-col items-center justify-center gap-7 md:gap-9 px-6">
-          <a v-for="m in menu" :key="m.href" :href="m.href" @click="closeMenu"
-             class="text-ink text-3xl md:text-5xl font-medium uppercase tracking-wide hover:tracking-[0.05em] transition-all">{{ m.label }}</a>
+          <template v-for="m in menu" :key="m.label">
+            <NuxtLink
+              v-if="m.to"
+              :to="m.to"
+              @click="closeMenu"
+              class="text-ink text-3xl md:text-5xl font-medium uppercase tracking-wide hover:tracking-[0.05em] transition-all"
+            >{{ m.label }}</NuxtLink>
+            <a
+              v-else
+              :href="m.href"
+              @click="closeMenu"
+              class="text-ink text-3xl md:text-5xl font-medium uppercase tracking-wide hover:tracking-[0.05em] transition-all"
+            >{{ m.label }}</a>
+          </template>
         </nav>
         <div class="pb-10 md:pb-14 flex flex-col items-center gap-5">
           <div class="flex items-center gap-5">
