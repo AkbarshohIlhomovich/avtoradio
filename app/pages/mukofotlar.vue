@@ -17,7 +17,7 @@ useHead({
 
 <template>
   <main class="bg-y min-h-screen">
-    <section v-motion-slide-visible-once-bottom class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0 pt-[200px] md:pt-[240px] pb-10 md:pb-14">
+    <section v-motion-slide-visible-once-bottom class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0 pt-[110px] md:pt-[160px] pb-10 md:pb-14">
       <span class="block text-[11px] tracking-[0.32em] uppercase text-black/70 font-semibold mb-4">Bosh sahifa / Mukofotlar</span>
       <h1 class="text-[44px] md:text-[80px] leading-[1.02] font-bold italic text-black">
         MUKOFOTLAR

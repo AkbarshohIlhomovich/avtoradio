@@ -20,7 +20,7 @@ const { playing, loading, toggle: toggleLive } = useLivePlayer()
 <template>
   <main class="min-h-screen">
     <!-- Hero section -->
-    <section class="bg-y pt-[200px] md:pt-[240px] pb-16 md:pb-24">
+    <section class="bg-y pt-[110px] md:pt-[160px] pb-16 md:pb-24">
       <div
         v-motion-slide-visible-once-bottom
         class="w-full max-w-[1200px] mx-auto px-4 md:px-8 xl:px-0"

@@ -145,11 +145,15 @@ const year = 2026
           <span class="hidden md:inline text-white/25">·</span>
           <span>Barcha huquqlar himoyalangan.</span>
         </div>
-        <div class="flex items-center gap-3 tabular-nums uppercase tracking-[0.18em]">
-          <span>Chastota 102.0 FM</span>
-          <span class="text-white/25">·</span>
-          <span>Toshkent · Sirdaryo</span>
-        </div>
+        <a
+          href="https://eurosoft.uz"
+          target="_blank"
+          rel="noopener"
+          class="group inline-flex items-center gap-1.5 text-[12px] tracking-[0.18em] uppercase font-semibold text-white/40 hover:text-y transition-colors"
+        >
+          <span>Made by</span>
+          <span class="font-bold text-white/70 group-hover:text-y transition-colors">Eurosoft.uz</span>
+        </a>
       </div>
     </div>
   </footer>
