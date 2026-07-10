@@ -213,8 +213,10 @@ onBeforeUnmount(() => {
              :initial="{ opacity: 0, x: 16 }"
              :enter="{ opacity: 1, x: 0, transition: { delay: 320, duration: 500, ease: [0.22, 0.61, 0.36, 1] } }"
         >
-          <!-- Prominent Jonli efir CTA (mobile + tablet + iPad Pro lg) -->
+          <!-- Prominent Jonli efir CTA (mobile + tablet + iPad Pro lg)
+               — hidden on home page mobile: the hero has its own big listen button below the video -->
           <button
+            v-if="!(route.path === '/')"
             type="button"
             @click="toggleLive"
             :aria-label="playing ? 'To‘xtatish' : 'Jonli efirni tinglash'"

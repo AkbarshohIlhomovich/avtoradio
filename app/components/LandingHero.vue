@@ -2,6 +2,9 @@
 const vid = ref<HTMLVideoElement | null>(null)
 const ended = ref(false)
 
+// Live stream — used by the big listen button below the video (mobile only)
+const { playing, loading, toggle: toggleLive } = useLivePlayer()
+
 function tryUnmute() {
   if (!vid.value) return
   vid.value.muted = false
@@ -81,6 +84,28 @@ onMounted(async () => {
           </button>
         </Transition>
       </div>
+
+      <!-- Simple listen CTA — mobile + tablet + iPad Pro lg only, below the video -->
+      <button
+        type="button"
+        @click="toggleLive"
+        :aria-label="playing ? 'To‘xtatish' : 'Jonli efirni tinglash'"
+        class="xl:hidden mt-5 md:mt-6 w-full h-14 md:h-16 flex items-center justify-center gap-3
+               bg-y text-black border-2 border-black hover:bg-black hover:text-y transition-colors"
+      >
+        <span v-if="loading" class="block w-5 h-5 border-2 border-black/25 border-t-black rounded-full animate-spin"></span>
+        <svg v-else viewBox="0 0 43 47" class="w-[18px] h-[18px] md:w-[20px] md:h-[20px] fill-current">
+          <path v-if="!playing" d="M5.907 47a6 6 0 0 1-3.043-.829C1.022 45.086 0 43.032 0 40.921V6.019c0-1.68.635-3.34 1.894-4.475A5.99 5.99 0 0 1 8.86.777l31.187 17.695A5.79 5.79 0 0 1 43 23.5c0 2.073-1.127 3.989-2.953 5.027L8.86 46.223A6 6 0 0 1 5.907 47z"/>
+          <g v-else>
+            <rect x="6" y="6" width="11" height="35" rx="2"/>
+            <rect x="26" y="6" width="11" height="35" rx="2"/>
+          </g>
+        </svg>
+        <span class="text-[14px] md:text-[16px] tracking-[0.16em] uppercase font-bold whitespace-nowrap">
+          {{ loading ? 'Yuklanmoqda' : playing ? 'To‘xtatish' : 'Jonli efirni tinglash' }}
+        </span>
+      </button>
     </div>
   </section>
 </template>
+
