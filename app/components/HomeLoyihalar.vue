@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const featured = [
-  { title: 'TONGI REYS',        sub: 'Tongi blok',     img: '/img/projects/p-tongi-reys.jpg' },
-  { title: 'OMADLI QO‘NG‘IROQ', sub: 'Tongi blok',     img: '/img/projects/p-omadli.jpg' },
-  { title: 'KECHKI SAFAR',      sub: 'Kechki blok',    img: '/img/projects/p-kechki-safar.png' },
-  { title: 'TONNA BENZIN',      sub: 'Kechki blok',    img: '/img/projects/p-tonna-benzin.png' },
-  { title: 'RADIO KAFE',        sub: 'Kundizgi blok',  img: '/img/projects/p-radio-kafe.jpg' },
-  { title: 'XALQONA',           sub: 'Tinglovchilar ovozi', img: '/img/projects/p-xalqona.jpg' },
+  { title: 'OMADLI QO‘NG‘IROQ', sub: 'Tongi reys · 08:00',    img: '/img/projects/p-omadli.jpg' },
+  { title: 'TEKIN DASTURXON',   sub: 'Tongi reys · 09:00',    img: '/img/projects/p-radio-kafe.jpg' },
+  { title: 'XAZINA',            sub: 'Radio charter · 14:00', img: '/img/projects/p-xalqona.jpg' },
+  { title: 'TOP TAKSI',         sub: 'Radio charter · 15:00', img: '/img/projects/p-agent.jpg' },
+  { title: 'TONNA BENZIN',      sub: 'Kechki safari · 17:00', img: '/img/projects/p-tonna-benzin.png' },
+  { title: 'KUN VA YAKUN',      sub: 'Kechki safari · 19:00', img: '/img/projects/p-kechki-safar.png' },
 ]
 </script>
 
@@ -17,7 +17,7 @@ const featured = [
         <div>
           <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-black/70 mb-3">Loyihalar</span>
           <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-black tracking-tight">
-            15 ta loyiha, tongdan kechgacha.
+            9 ta jonli loyiha,<br class="hidden md:block"/> tongdan kechgacha.
           </h2>
         </div>
         <NuxtLink

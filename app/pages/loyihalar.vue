@@ -1,13 +1,13 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Efirlar va Loyihalar',
-  description: 'AVTORADIO 102 FM ning 15 ta jonli efir loyihasi: Tongi Reys, Omadli Qo‘ng‘iroq, Radio Kafe, Kechki Safar, Tonna Benzin, Xalqona, Sonogramma va boshqalar. Jonli efir studiyasidan to‘g‘ridan-to‘g‘ri eshiting.',
-  ogTitle: 'Avtoradio Efirlari — 15 ta Loyiha',
+  description: 'AVTORADIO 102 FM ning 3 ta efir bloki va 9 ta jonli loyihasi: Tongi reys (Tanaffus, Omadli qo‘ng‘iroq, Tekin dasturxon), Radio charter (Yuzda yurma, Xazina, Top taksi), Kechki safari (Tonna benzin, Love & Love shou, Kun va yakun). Jonli efirni to‘g‘ridan-to‘g‘ri eshiting.',
+  ogTitle: 'Avtoradio Efirlari — 3 ta blok, 9 ta loyiha',
   ogDescription: 'Tongdan kechgacha — jonli efir, interaktiv shoular va mualliflik rukni. ON AIR tugmasini bosib jonli efirni eshiting.',
   ogUrl: 'https://avtoradio.uz/loyihalar',
   ogImage: 'https://avtoradio.uz/og-cover.jpg',
   twitterTitle: 'Avtoradio Efirlari',
-  twitterDescription: '15 ta jonli loyiha — tongdan kechgacha.',
+  twitterDescription: '9 ta jonli loyiha — tongdan kechgacha.',
 })
 
 useHead({

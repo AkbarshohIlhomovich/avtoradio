@@ -1,13 +1,13 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Mukofotlar',
-  description: 'AVTORADIO 102 FM 10 yillik yubiley mukofotlari tizimi: 102 million so‘m naqd pul, 102 gramm oltin quymasi, 2 ta yangi avtomobil va 2 ta xorijiy sayohat yo‘llanmasi. 4200 ta omadli tinglovchi yil davomida saralanadi.',
+  description: 'AVTORADIO 102 FM yutuqli loyihalarining bu yilgi sovrinlari: 102 million so‘m pul mukofoti (Omadli qo‘ng‘iroq), 102 gramm tilla quyma (Xazina), 2 ta yangi avtomobil (Tonna benzin va Top taksi) va 2 ta chet-el sayohati (Love & Love shou). Yakuniy g‘oliblar Gala-konsertda jonli efirda aniqlanadi.',
   ogTitle: 'Avtoradio Mukofotlari — Yubiley Jamg‘armasi',
   ogDescription: '102 mln so‘m, 102 g oltin, 2 ta avtomobil va 2 ta xorijiy sayohat — gala-konsertda jonli efirda topshiriladi.',
   ogUrl: 'https://avtoradio.uz/mukofotlar',
   ogImage: 'https://avtoradio.uz/og-cover.jpg',
   twitterTitle: 'Avtoradio Mukofotlari',
-  twitterDescription: 'Yubiley jamg‘armasi — 102 mln so‘m va boshqa sovg‘alar.',
+  twitterDescription: 'Yil sovrinlari — 102 mln so‘m, 102 gr tilla, 2 ta avtomobil va 2 ta chet-el sayohati.',
 })
 
 useHead({
@@ -23,7 +23,7 @@ useHead({
         MUKOFOTLAR
       </h1>
       <p class="mt-6 max-w-[640px] text-[16px] md:text-[18px] leading-relaxed text-black/80">
-        Yubiley yili — 102 FM tinglovchilarini kutayotgan asosiy sovg‘alar va o‘yinlar tizimi. Naqd pul, oltin, avtomobil va xorijiy sayohatlar.
+        Yutuqli loyihalarimizning bu yilgi sovrinlari — Omadli qo‘ng‘iroq, Xazina, Tonna benzin, Top taksi va Love & Love shou g‘oliblari uchun. Har mukofot yakuniy Gala-konsertda jonli efirda topshiriladi.
       </p>
     </section>
 

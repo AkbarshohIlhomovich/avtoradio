@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Boshlovchilar',
-  description: 'AVTORADIO 102 FM boshlovchilari — Nazira Inoyatova, Kamola Ermatova, Nurmuhammad Isroilov, Jasur Xudoyberganov, Otabek Tojiboyev. Tonggi, kunduzgi va kechki bloklarning ovozlari.',
+  description: 'AVTORADIO 102 FM boshlovchilari — Nazira Inoyatova, Mirzayor Erkinov (Tongi reys), Kamola Ermatova, Madina Fayz (Radio charter), Jasur Xudayberganov, Nurmuhammad Isroil, Bekmirza Rashidov (Kechki safari). Mikrofon ortidagi 7 ovoz sohibi.',
   ogTitle: 'Avtoradio Boshlovchilari',
-  ogDescription: 'Efirning har bir blokida sizga hamroh bo‘ladigan 5 ta ovoz — Nazira, Kamola, Nurmuhammad, Jasur va Otabek.',
+  ogDescription: 'Har bir efir blokining boshlovchilari — Tongi reys, Radio charter, Kechki safari.',
   ogUrl: 'https://avtoradio.uz/boshlovchilar',
   ogImage: 'https://avtoradio.uz/og-cover.jpg',
   twitterTitle: 'Avtoradio Boshlovchilari',

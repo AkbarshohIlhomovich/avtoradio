@@ -68,49 +68,74 @@ const year = 2026
         </div>
       </div>
 
-      <!-- Socials + Apps row -->
-      <div class="border-t border-white/12 pt-7 mb-7 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div class="flex flex-wrap items-center gap-3">
-          <span class="text-[10px] tracking-[0.28em] uppercase font-bold text-y/65 mr-2">Kuzating</span>
-          <a
-            v-for="s in social"
-            :key="s.name"
-            :href="s.href"
-            target="_blank"
-            rel="noopener"
-            :aria-label="s.name"
-            class="w-9 h-9 inline-flex items-center justify-center bg-white/8 hover:bg-y rounded-full transition-colors group"
-          >
-            <img :src="s.img" alt="" aria-hidden="true" class="w-4 h-4 object-contain invert brightness-200 group-hover:invert-0 group-hover:brightness-100 transition-all"/>
-          </a>
+      <!-- Socials — bigger buttons with brand names -->
+      <div class="border-t border-white/12 pt-10 pb-2 mb-8">
+        <div class="mb-6 text-center md:text-left">
+          <p class="text-[16px] md:text-[18px] font-bold text-white leading-tight">
+            Bizni ijtimoiy tarmoqlarda ham kuzating
+          </p>
+          <p class="mt-2 text-[13px] text-white/55 leading-relaxed max-w-[520px] mx-auto md:mx-0">
+            Yangi loyihalar, jonli efir e’lonlari va g‘oliblar tabriki — bosing va obuna bo‘ling.
+          </p>
+        </div>
+        <ul class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <li v-for="s in social" :key="s.name">
+            <a
+              :href="s.href"
+              target="_blank"
+              rel="noopener"
+              :aria-label="s.name"
+              class="group flex items-center gap-3 bg-white/8 hover:bg-y hover:text-black text-white
+                     px-4 py-3.5 border border-white/12 hover:border-y transition-colors"
+            >
+              <img :src="s.img" alt="" aria-hidden="true"
+                   class="w-6 h-6 object-contain invert brightness-200 group-hover:invert-0 group-hover:brightness-100 transition-all flex-shrink-0"/>
+              <span class="text-[14px] font-bold tracking-tight">{{ s.name }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobil ilova block — prominent CTA -->
+      <div class="border-t border-white/12 pt-10 pb-2 mb-8">
+        <div class="mb-6 text-center md:text-left">
+          <p class="text-[16px] md:text-[18px] font-bold text-white leading-tight">
+            Avtoradioni cho‘ntagingizga soling
+          </p>
+          <p class="mt-2 text-[13px] text-white/55 leading-relaxed max-w-[520px] mx-auto md:mx-0">
+            Jonli efir, dastur jadvali va arxiv yozuvlari — istalgan joyda va istalgan vaqtda. Bepul yuklab oling.
+          </p>
         </div>
 
-        <!-- App Store / Google Play -->
-        <div class="flex flex-col sm:flex-row gap-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <!-- App Store -->
           <a
             href="https://apps.apple.com/uz/app/avtoradio/id6741562744"
             target="_blank"
             rel="noopener"
             aria-label="App Store"
-            class="flex items-center gap-2.5 bg-white/8 hover:bg-y hover:text-black text-white rounded-lg px-3.5 py-2 border border-white/12 transition-colors"
+            class="group flex items-center gap-3 bg-white text-black hover:bg-y
+                   px-4 py-2.5 border-2 border-white hover:border-y transition-colors"
           >
-            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current flex-shrink-0">
+            <svg viewBox="0 0 24 24" class="w-7 h-7 fill-current flex-shrink-0">
               <path d="M17.05 12.04c-.03-2.94 2.4-4.36 2.5-4.43-1.36-2-3.48-2.27-4.24-2.3-1.8-.18-3.52 1.06-4.44 1.06-.92 0-2.34-1.04-3.84-1.01-1.98.03-3.8 1.15-4.82 2.93-2.06 3.56-.52 8.83 1.48 11.72.98 1.42 2.14 3.01 3.66 2.95 1.46-.06 2.02-.95 3.8-.95 1.78 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.55-2.86 1.12-1.64 1.58-3.23 1.6-3.31-.04-.02-3.07-1.18-3.07-4.72zM14.16 3.4c.8-.97 1.34-2.32 1.19-3.66-1.16.05-2.55.77-3.38 1.74-.74.86-1.39 2.23-1.22 3.55 1.29.1 2.61-.66 3.41-1.63z"/>
             </svg>
             <span class="flex flex-col leading-tight">
-              <span class="text-[8px] tracking-[0.04em]">Yuklab oling</span>
-              <span class="text-[13px] font-semibold tracking-tight -mt-0.5">App Store</span>
+              <span class="text-[9px] tracking-[0.14em] uppercase font-semibold opacity-70">Yuklab oling</span>
+              <span class="text-[15px] font-bold tracking-tight">App Store</span>
             </span>
           </a>
 
+          <!-- Google Play -->
           <a
             href="https://play.google.com/store/apps/details?id=com.eurosoft.avtoradio"
             target="_blank"
             rel="noopener"
             aria-label="Google Play"
-            class="flex items-center gap-2.5 bg-white/8 hover:bg-y hover:text-black text-white rounded-lg px-3.5 py-2 border border-white/12 transition-colors"
+            class="group flex items-center gap-3 bg-white text-black hover:bg-y
+                   px-4 py-2.5 border-2 border-white hover:border-y transition-colors"
           >
-            <svg viewBox="0 0 512 512" class="w-5 h-5 flex-shrink-0">
+            <svg viewBox="0 0 512 512" class="w-7 h-7 flex-shrink-0">
               <defs>
                 <linearGradient id="fp-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stop-color="#00C3FF"/><stop offset="100%" stop-color="#00E5A1"/>
@@ -131,8 +156,8 @@ const year = 2026
               <path fill="url(#fp-grad1)" d="M342 181L75 30C59 21 45 23 37 32l227 227z"/>
             </svg>
             <span class="flex flex-col leading-tight">
-              <span class="text-[8px] tracking-[0.04em]">Yuklab oling</span>
-              <span class="text-[13px] font-semibold tracking-tight -mt-0.5">Google Play</span>
+              <span class="text-[9px] tracking-[0.14em] uppercase font-semibold opacity-70">Yuklab oling</span>
+              <span class="text-[15px] font-bold tracking-tight">Google Play</span>
             </span>
           </a>
         </div>

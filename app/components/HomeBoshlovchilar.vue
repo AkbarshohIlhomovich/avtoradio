@@ -1,10 +1,12 @@
 <script setup lang="ts">
 const hosts = [
-  { name: 'Nazira Inoyatova',     img: '/img/host-nazira.jpg',      role: 'Tongi blok' },
-  { name: 'Kamola Ermatova',      img: '/img/host-kamola.jpg',      role: 'Kundizgi blok' },
-  { name: 'Nurmuhammad Isroilov', img: '/img/host-nurmuhammad.jpg', role: 'Kechki blok' },
-  { name: 'Jasur Xudoyberganov',  img: '/img/host-jasur.jpg',       role: 'Kechki blok' },
-  { name: 'Otabek Tojiboyev',     img: '/img/host-otabek.jpg',      role: 'Kechki blok' },
+  { name: 'Nazira Inoyatova',    img: '/img/host-nazira.jpg',      role: 'Tongi reys' },
+  { name: 'Mirzayor Erkinov',    img: '/img/host-mirzayor.jpg',    role: 'Tongi reys' },
+  { name: 'Kamola Ermatova',     img: '/img/host-kamola.jpg',      role: 'Radio charter' },
+  { name: 'Madina Fayz',         img: '/img/host-madina.jpg',      role: 'Radio charter' },
+  { name: 'Jasur Xudayberganov', img: '/img/host-jasur.jpg',       role: 'Kechki safari' },
+  { name: 'Nurmuhammad Isroil',  img: '/img/host-nurmuhammad.jpg', role: 'Kechki safari' },
+  { name: 'Bekmirza Rashidov',   img: '/img/host-bekmirza.jpg',    role: 'Kechki safari' },
 ]
 </script>
 
@@ -17,7 +19,7 @@ const hosts = [
         <div>
           <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-y/70 mb-3">Boshlovchilar</span>
           <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-white tracking-tight">
-            Ovozlar ortida turgan insonlar.
+            Mikrofon ortidagi ovoz sohiblari.
           </h2>
         </div>
         <NuxtLink
@@ -29,7 +31,7 @@ const hosts = [
         </NuxtLink>
       </header>
 
-      <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
+      <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 md:gap-5">
         <li
           v-for="(h, i) in hosts"
           :key="h.name"

@@ -27,58 +27,61 @@ interface Block {
 }
 
 const hosts: Host[] = [
-  { name: 'Nazira Inoyatova',     img: '/img/host-nazira.jpg',      block: 'A', blockName: 'Tongi blok',     time: '06:00 — 09:00', show: '«Taraddud» radioshou',         role: 'Bosh boshlovchi' },
-  { name: 'Kamola Ermatova',      img: '/img/host-kamola.jpg',      block: 'B', blockName: 'Kundizgi blok',  time: '09:00 — 18:00', show: '«Nurli kun» dasturlari',       role: 'Olib boruvchi' },
-  { name: 'Nurmuhammad Isroilov', img: '/img/host-nurmuhammad.jpg', block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Sarhisob vaqti — Kechki safari', role: 'Bosh boshlovchi va muallif' },
-  { name: 'Jasur Xudoyberganov',  img: '/img/host-jasur.jpg',       block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Sarhisob vaqti — Kechki safari', role: 'Olib boruvchi' },
-  { name: 'Otabek Tojiboyev',     img: '/img/host-otabek.jpg',      block: 'C', blockName: 'Kechki blok',    time: '18:00 — 21:00', show: 'Sarhisob vaqti — Kechki safari', role: 'Olib boruvchi' },
+  { name: 'Nazira Inoyatova',     img: '/img/host-nazira.jpg',      block: 'A', blockName: 'Tongi reys',    time: '07:00 — 10:00', show: 'Tongi reys',    role: 'Bosh boshlovchi' },
+  { name: 'Mirzayor Erkinov',     img: '/img/host-mirzayor.jpg',    block: 'A', blockName: 'Tongi reys',    time: '07:00 — 10:00', show: 'Tongi reys',    role: 'Olib boruvchi' },
+  { name: 'Kamola Ermatova',      img: '/img/host-kamola.jpg',      block: 'B', blockName: 'Radio charter', time: '13:00 — 16:00', show: 'Radio charter', role: 'Bosh boshlovchi' },
+  { name: 'Madina Fayz',          img: '/img/host-madina.jpg',      block: 'B', blockName: 'Radio charter', time: '13:00 — 16:00', show: 'Radio charter', role: 'Olib boruvchi' },
+  { name: 'Jasur Xudayberganov',  img: '/img/host-jasur.jpg',       block: 'C', blockName: 'Kechki safari', time: '17:00 — 20:00', show: 'Kechki safari', role: 'Bosh boshlovchi' },
+  { name: 'Nurmuhammad Isroil',   img: '/img/host-nurmuhammad.jpg', block: 'C', blockName: 'Kechki safari', time: '17:00 — 20:00', show: 'Kechki safari', role: 'Bosh boshlovchi va muallif' },
+  { name: 'Bekmirza Rashidov',    img: '/img/host-bekmirza.jpg',    block: 'C', blockName: 'Kechki safari', time: '17:00 — 20:00', show: 'Kechki safari', role: 'Olib boruvchi' },
 ]
 
 const blocks: Record<'A' | 'B' | 'C', Block> = {
   A: {
     code: 'A',
-    subtitle: 'TONGGI BLOK LOYIXASI:',
-    title: '"TARADDUD" RADIOSHOUSI',
+    subtitle: 'TONGI BLOK · 07:00 — 10:00',
+    title: 'TONGI REYS',
     pencil: '/img/pdf-tongi-main.jpg',
-    body: 'Sharq falsafasida "Taraddud" tushunchasi insonning ichki olamida salbiy va yomon fikrlarni rad etib, ezgulikni tafakkur qilishi hamda yangi kunga tadorik ko‘rishini anglatadi. Ushbu falsafiy asosga tayanib tashkil etilgan 3 soatlik jonli interaktiv shou tinglovchilarni yaxshi kayfiyat bilan yangi kunga tayyorlaydi. Tongda <strong>"Omadli qo‘ng‘iroq"</strong>, <strong>"Tanaffus – mundial 2026"</strong>, <strong>"Tekin dasturxon"</strong> loyihalari o‘tkaziladi.',
+    body: 'Ertalabki uch soatlik jonli efir — kunning tetik boshlanishi. Blok ichida uchta loyiha bo‘lib o‘tadi: <strong>«Tanaffus»</strong> (mundial va futbol suhbatlari), <strong>«Omadli qo‘ng‘iroq»</strong> (bog‘lana olgan tinglovchilar orasidan g‘olib aniqlash), <strong>«Tekin dasturxon»</strong> (ishtaha ochar ovozli tanlov va AKSU restoranida 2 kishilik vaucher).',
     bullets: [
-      { strong: 'Mukofot jamg‘armasi:', rest: '102 million so‘m pul mablag‘i va xorijga ikki kishilik sayohat yo‘llanmasi.' },
-      { strong: 'Ijtimoiy mas’uliyat:', rest: 'Loyiha davomida tinglovchilar e’tiborini jalb qilgan holda yo‘l harakati xavfsizligi, yo‘llardagi joriy holat, avariyalar va tirbandliklar haqida tezkor va hayotiy muhim ma’lumotlar berib boriladi.' },
+      { strong: 'Bosh mukofot:', rest: '102 000 000 so‘m — «Omadli qo‘ng‘iroq» g‘oliblari o‘rtasida yil so‘ngida Gala-konsertda o‘ynaladi.' },
+      { strong: 'Ijtimoiy mas’uliyat:', rest: 'Efir raqami +998 97 710 10 20 — kun davomida yo‘l harakati va xavfsizlik haqida tezkor xabarlar berib boriladi.' },
     ],
     hosts: [
-      { first: 'Nazira',  last: 'INOYATOVA', img: '/img/host-nazira.jpg' },
-      { first: 'Mirzayor', last: 'ERKINOV',  img: '/img/host-nurmuhammad.jpg' },
+      { first: 'Nazira',   last: 'INOYATOVA', img: '/img/host-nazira.jpg' },
+      { first: 'Mirzayor', last: 'ERKINOV',   img: '/img/host-mirzayor.jpg' },
     ],
   },
   B: {
     code: 'B',
-    subtitle: 'KUNDIZGI BLOK LOYIXALARI:',
-    title: '"NURLI KUN" DASTURLARI',
+    subtitle: 'KUNDIZGI BLOK · 13:00 — 16:00',
+    title: 'RADIO CHARTER',
     pencil: '/img/pdf-kundizgi-main.jpg',
-    body: 'Bu paytda tinglovchilarning kundalik faoliyati eng qizg‘in nuqtaga chiqadi. Loyiha doirasida insonlarni o‘ziga tashqaridan qarashga undovchi maxsus <strong>"Xalqona"</strong> loyihasi ishlaydi. Unda ko‘chadagi qaynoq jarayonlar va xalq ichidan kelgan ovozli xabarlar "xalqdan olib xalqqa berish" tamoyili asosida efirga uzatiladi.',
+    body: 'Kunduzgi uch soat — yo‘l madaniyati, o‘yin va shahar bo‘ylab sayohat. Blok ichida uchta loyiha: <strong>«Yuzda yurma»</strong> (haydovchilarni xushyorlikka chorlash), <strong>«Xazina»</strong> (shahar bo‘ylab yashiringan sirli sandiqcha), <strong>«Top taksi»</strong> (buyurtma qilingan haydovchi g‘olibga aylanadi). Har uch loyiha ham «parvoz» va sayohat tematikasida.',
     bullets: [
-      { strong: 'Asosiy o‘yinlar:', rest: '«Yuzda yurma», «Xazina», «Top Taksi», «Zukko» — original interaktiv loyihalar.' },
-      { strong: 'Mukofot:', rest: '«Oltin chipta» egalariga 102 gramm oltin quymasi grand-kontsertda o‘ynaladi.' },
+      { strong: 'Xazina sovrini:', rest: '102 gramm tilla quyma (yoki huddi shu qiymatga teng quyosh panellari) — yil so‘ngida Gala-konsertda o‘ynaladi.' },
+      { strong: 'Top taksi asosiy sovrini:', rest: 'Yap-yangi avtomobil — g‘oliblar orasida yil so‘ngidagi Gala-konsertda o‘ynaladi.' },
     ],
     hosts: [
       { first: 'Kamola', last: 'ERMATOVA', img: '/img/host-kamola.jpg' },
+      { first: 'Madina', last: 'FAYZ',     img: '/img/host-madina.jpg' },
     ],
   },
   C: {
     code: 'C',
-    subtitle: 'KECHKI BLOK LOYIXALARI:',
-    title: 'SARHISOB VAQTI — KECHKI SAFARI',
+    subtitle: 'KECHKI BLOK · 17:00 — 20:00',
+    title: 'KECHKI SAFARI',
     pencil: '/img/pdf-kechki-right.jpg',
     pencilRight: '/img/pdf-kechki-left.jpg',
-    body: 'Kechki 3 soatlik dastur insonlarning kunlik ishlarini sarhisob qilish, ya’ni "kunning hisoboti" qilish vaqtiga to‘g‘ri keladi. <strong>"Tonna benzin"</strong>, <strong>"Kun va yakun"</strong>, <strong>"Love Love Show"</strong>, <strong>"Relaks format"</strong> kabi loyihalar orqali tinglovchilar kunning eng qiziq onlarini jonli efirda birga kechiradilar.',
+    body: 'Kun yakuni — asosiy sovrinlar, oilaviy suhbat va yurakdan chiqqan hikoyalar. Blok ichida uchta loyiha: <strong>«Tonna benzin»</strong> (kalit so‘zni yodlash — bak benzin va yangi avtomobil imkoni), <strong>«Love & Love shou»</strong> (oilaviy juftliklar uchun — chet-el sayohati sovrini), <strong>«Kun va yakun»</strong> (kunning yakunlovchi yurakdan chiqqan suhbatlar).',
     bullets: [
-      { strong: 'Tonna benzin:', rest: 'Kalit so‘zni to‘g‘ri topgan tinglovchiga to‘liq bak benzin va yil yakunidagi avtomobil o‘yini yo‘llanmasi.' },
-      { strong: 'Relaks format (21:00 — 22:00):', rest: 'Nurmuhammad Isroilovning mualliflik adabiy dasturi — nodir she’riy satrlar va musiqalar.' },
+      { strong: 'Tonna benzin sovrini:', rest: 'To‘liq bak benzin va yil so‘ngidagi Gala-konsertda yangi avtomobil o‘yinida ishtirok.' },
+      { strong: 'Love & Love shou sovrini:', rest: '2 kishilik chet-el sayohati yo‘llanmasi — g‘olib juftliklar orasida Gala-konsertda o‘ynaladi.' },
     ],
     hosts: [
-      { first: 'Nurmuhammad', last: 'ISROILOV',     img: '/img/host-nurmuhammad.jpg' },
-      { first: 'Jasur',       last: 'XUDOYBERGANOV', img: '/img/host-jasur.jpg' },
-      { first: 'Otabek',      last: 'TOJIBOEV',     img: '/img/host-otabek.jpg' },
+      { first: 'Jasur',       last: 'XUDAYBERGANOV', img: '/img/host-jasur.jpg' },
+      { first: 'Nurmuhammad', last: 'ISROIL',        img: '/img/host-nurmuhammad.jpg' },
+      { first: 'Bekmirza',    last: 'RASHIDOV',      img: '/img/host-bekmirza.jpg' },
     ],
   },
 }

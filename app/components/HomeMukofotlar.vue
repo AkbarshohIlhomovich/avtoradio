@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const featured = {
-  amount: '102', unit: 'million so‘m', label: 'Naqd pul mukofoti', img: '/img/prizes/prize-cash.jpg',
+  amount: '102', unit: 'million so‘m', label: 'Omadli qo‘ng‘iroq', img: '/img/som.png',
 }
 const side = [
-  { amount: '102', unit: 'gramm oltin',     label: 'Oltin quymasi',     img: '/img/prizes/prize-gold.jpg' },
-  { amount: '2',   unit: 'yangi avtomobil', label: 'Bosh avto-mukofot', img: '/img/prizes/prize-car.jpg' },
-  { amount: '2',   unit: 'xorijiy sayohat', label: 'Halqaro turizm',    img: '/img/prizes/prize-travel.jpg' },
+  { amount: '102', unit: 'gramm tilla',     label: 'Xazina',            img: '/img/prizes/prize-gold.png' },
+  { amount: '2',   unit: 'yangi avtomobil', label: 'Tonna benzin · Top taksi', img: '/img/prizes/prize-car.png' },
+  { amount: '2',   unit: 'chet-el sayohati', label: 'Love & Love shou', img: '/img/prizes/prize-travel.jpg' },
 ]
 </script>
 
@@ -17,7 +17,7 @@ const side = [
         <div>
           <span class="block text-[12px] tracking-[0.28em] uppercase font-bold text-y/70 mb-3">Mukofotlar</span>
           <h2 class="text-[34px] md:text-[52px] leading-[1.04] font-bold italic text-white tracking-tight">
-            Yubiley jamg‘armasi.
+            Yil sovrinlari.
           </h2>
         </div>
         <NuxtLink

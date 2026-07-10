@@ -100,15 +100,16 @@ onBeforeUnmount(() => {
       <div class="w-full max-w-[1200px] mx-auto px-6 xl:px-0 h-[40px]
                   grid grid-cols-[auto_1fr_auto] gap-6 items-stretch">
 
-        <!-- LIVE button (left) -->
+        <!-- LIVE button (left) — desktop top strip, prominent CTA -->
         <button
           type="button"
           @click="toggleLive"
-          :aria-label="playing ? 'To‘xtatish' : 'Jonli efirni eshitish'"
-          class="live-strip group flex items-center gap-2.5 h-full px-3 -ml-3 hover:bg-white/[0.04] transition-colors"
+          :aria-label="playing ? 'To‘xtatish' : 'Jonli efirni tinglash'"
+          class="live-strip group flex items-center gap-2.5 h-full px-3 -ml-3 transition-colors"
+          :class="!playing && !loading ? 'live-strip-idle' : 'hover:bg-white/[0.04]'"
         >
-          <span class="w-[7px] h-[7px] rounded-full bg-[#FF1A1A] flex-shrink-0"
-                :class="playing ? 'live-dot-pulse' : 'opacity-80'"></span>
+          <span class="w-[8px] h-[8px] rounded-full bg-[#FF1A1A] flex-shrink-0"
+                :class="!playing ? 'live-dot-pulse' : 'opacity-80'"></span>
 
           <span class="flex-shrink-0 w-[14px] h-[14px] flex items-center justify-center text-y">
             <span v-if="loading" class="block w-3 h-3 border-[1.5px] border-y/25 border-t-y rounded-full animate-spin"></span>
@@ -120,8 +121,8 @@ onBeforeUnmount(() => {
             </svg>
           </span>
 
-          <span class="text-y font-bold text-[10px] tracking-[0.3em] uppercase">
-            {{ loading ? 'Yuklanmoqda' : playing ? 'EFIRDA' : 'ON AIR' }}
+          <span class="text-y font-bold text-[10px] tracking-[0.28em] uppercase">
+            {{ loading ? 'Yuklanmoqda' : playing ? 'EFIRDA' : 'Jonli efir · Tinglash' }}
           </span>
         </button>
 
@@ -212,24 +213,30 @@ onBeforeUnmount(() => {
              :initial="{ opacity: 0, x: 16 }"
              :enter="{ opacity: 1, x: 0, transition: { delay: 320, duration: 500, ease: [0.22, 0.61, 0.36, 1] } }"
         >
-          <!-- Compact play button (mobile + tablet + iPad Pro lg) -->
+          <!-- Prominent Jonli efir CTA (mobile + tablet + iPad Pro lg) -->
           <button
             type="button"
             @click="toggleLive"
-            :aria-label="playing ? 'To‘xtatish' : 'Jonli efirni eshitish'"
-            class="xl:hidden inline-flex items-center gap-2 h-10 px-2
-                   text-black hover:opacity-70 transition-opacity"
+            :aria-label="playing ? 'To‘xtatish' : 'Jonli efirni tinglash'"
+            class="live-cta xl:hidden relative inline-flex items-center gap-2 h-10 px-3.5
+                   bg-black text-y hover:bg-[#111] transition-colors overflow-hidden"
+            :class="!playing && !loading ? 'live-cta-idle' : ''"
           >
-            <span v-if="loading" class="block w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin"></span>
-            <svg v-else viewBox="0 0 43 47" class="w-[18px] h-[18px] fill-current">
+            <!-- Pulsing red tally dot -->
+            <span class="w-[7px] h-[7px] rounded-full bg-[#FF1A1A] flex-shrink-0"
+                  :class="!playing ? 'live-dot-pulse' : 'opacity-80'"></span>
+
+            <span v-if="loading" class="block w-4 h-4 border-2 border-y/25 border-t-y rounded-full animate-spin"></span>
+            <svg v-else viewBox="0 0 43 47" class="w-[14px] h-[14px] fill-current">
               <path v-if="!playing" d="M5.907 47a6 6 0 0 1-3.043-.829C1.022 45.086 0 43.032 0 40.921V6.019c0-1.68.635-3.34 1.894-4.475A5.99 5.99 0 0 1 8.86.777l31.187 17.695A5.79 5.79 0 0 1 43 23.5c0 2.073-1.127 3.989-2.953 5.027L8.86 46.223A6 6 0 0 1 5.907 47z"/>
               <g v-else>
                 <rect x="6" y="6" width="11" height="35" rx="2"/>
                 <rect x="26" y="6" width="11" height="35" rx="2"/>
               </g>
             </svg>
-            <span class="text-[12px] tracking-[0.18em] uppercase font-bold whitespace-nowrap">
-              {{ loading ? 'Yuklanmoqda' : playing ? 'EFIRDA' : 'ON AIR' }}
+
+            <span class="text-[11px] tracking-[0.18em] uppercase font-bold whitespace-nowrap">
+              {{ loading ? 'Yuklanmoqda' : playing ? 'EFIRDA' : 'Jonli efir' }}
             </span>
           </button>
 
@@ -355,8 +362,24 @@ onBeforeUnmount(() => {
 /* Pulsing red tally light */
 .live-dot-pulse { animation: live-pulse 1.4s ease-in-out infinite; }
 @keyframes live-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 26, 26, 0.55); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 26, 26, 0.7); }
   50%      { box-shadow: 0 0 0 5px rgba(255, 26, 26, 0); }
+}
+
+/* Live CTA idle state — subtle red glow attracts the eye */
+.live-cta-idle {
+  animation: live-cta-glow 2.4s ease-in-out infinite;
+}
+.live-strip-idle {
+  animation: live-strip-glow 2.4s ease-in-out infinite;
+}
+@keyframes live-cta-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 26, 26, 0.35); }
+  50%      { box-shadow: 0 0 0 6px rgba(255, 26, 26, 0); }
+}
+@keyframes live-strip-glow {
+  0%, 100% { background-color: rgba(255, 26, 26, 0);     }
+  50%      { background-color: rgba(255, 26, 26, 0.09);  }
 }
 
 /* EQ visualizer when playing */
